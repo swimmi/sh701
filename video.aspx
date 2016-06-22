@@ -25,7 +25,7 @@
 <!--#include file="jiance.aspx"-->
 <%
 '有无权限播放
-	SQL="select * from huiyuan_jihuoma where jihuoma='"&request("jihuoma")&"' and huiyuan_id="&request.Cookies("yrzzj")("id")
+	SQL="select * from huiyuan_jihuoma where jihuoma='"&request("jhm")&"' and huiyuan_id="&request.Cookies("yrzzj")("id")
 
 	set rs=server.CreateObject("adodb.recordset")
 	rs.Open SQL,conn,1,1
@@ -38,7 +38,7 @@
 	
 
 '检测
-	SQL="select * from view_video where bianhao='"&request("videobianhao")&"'"
+	SQL="select * from view_video where bianhao='"&request("bh")&"'"
 	set rs=server.CreateObject("adodb.recordset")
 	rs.Open SQL,conn,1,1
 	if not rs.eof and not rs.bof then
@@ -58,7 +58,7 @@
 '添加播放时间
 conn.execute("insert into jilu values("&request.Cookies("yrzzj")("tel")&",'"&tushutitle&"','"&title&"','"&now()&"') ")
 '播放数量
-conn.execute("update video set num="&num+1&" where bianhao='"&request("videobianhao")&"'")
+conn.execute("update video set num="&num+1&" where bianhao='"&request("bh")&"'")
 %>
 <title><%=title%></title>
 <div class="title">

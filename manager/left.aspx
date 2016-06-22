@@ -55,12 +55,12 @@ body {
 					<li class="lanmua"><a href="news/news.aspx" target='mainFrame'>添加资讯</a></li>
 					<li class="lanmua"><a href="news/al_read.aspx" target='mainFrame'>最新资讯</a></li>
 				</ul>
-			</li>	
+			</li>
 			<li name="li_sub4">
 				<a href="#" onClick="SwitchMenu('sub4')">系统设置</a>
 				<ul id="sub4" style="display:none">
 					<li class="lanmua"><a href="tushu/read.aspx" target='mainFrame'>图书印刷管理</a></li>
-					<li class="lanmua"><a href="tushu/jihuo.aspx" target='mainFrame'>生成激活码</a></li>
+					<li class="lanmua"><a href="tushu/jihuo.aspx" target='mainFrame'>激活码管理</a></li>
 					<li class="lanmua"><a href="sinkia/class11.aspx" target='mainFrame'>参数设置</a></li>
 					<li class="lanmua"><a href="tushu/guanggao.aspx" target='mainFrame'>广告管理</a></li>
 				</ul>

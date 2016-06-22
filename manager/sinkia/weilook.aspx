@@ -1,8 +1,8 @@
-
+ï»¿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%=request.Cookies("bj")("webname")%></title>
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
@@ -10,16 +10,16 @@
 <body>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">¶þÎ¬Âë¹ÜÀí</td>
+    <td height="80" colspan="2">äºŒç»´ç ç®¡ç†</td>
   </tr>
   <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÊÓÆµ¹ÜÀí &gt; ¶þÎ¬Âë¹ÜÀí</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; è§†é¢‘ç®¡ç† &gt; äºŒç»´ç ç®¡ç†</td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />¶þÎ¬Âë¹ÜÀí</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />äºŒç»´ç ç®¡ç†</td>
   </tr>
   <tr>
     <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
@@ -28,7 +28,7 @@
 
  <table width="100%" border="0" cellpadding="0" cellspacing="0">
    <tr>
-     <td height="260" align="center" valign="top">
+     <td height="280" align="center" valign="center">
 	 
 	 
 <%
@@ -78,10 +78,10 @@
 </script>	 </td>
    </tr>
    <tr>
-     <td align="center" valign="top"><%=videotitle%><br />¡¾µÚ<%=banci%>°æ´Î¡¿¡¾µÚ<%=yingci%>Ó¡´Î¡¿</td>
+     <td align="center" valign="top"><%=videotitle%><br />ã€ç¬¬<%=banci%>ç‰ˆæ¬¡ã€‘ã€ç¬¬<%=yingci%>å°æ¬¡ã€‘</td>
    </tr>
    <tr>
-     <td height="40" align="center" valign="bottom"><input type="submit" name="Submit22" value="·µ»ØÉÏÒ»²ã" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'Î¢ÈíÑÅºÚ';" onclick="javascript:history.go(-1)"/></td>
+     <td height="40" align="center" valign="bottom"><input type="submit" name="Submit22" value="è¿”å›žä¸Šä¸€å±‚" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'å¾®è½¯é›…é»‘';" onclick="javascript:history.go(-1)"/></td>
    </tr>
  </table></td>
   </tr>

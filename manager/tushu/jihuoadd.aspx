@@ -1,43 +1,43 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--#include file="../../conn.aspx"-->
 <!--#include file="md5.aspx"-->
 <%	 
-if request.form("submit")="ÅúÁ¿Éú³É¼¤»îÂë" then
+if request.form("submit")="æ‰¹é‡ç”Ÿæˆæ¿€æ´»ç " then
 
 if Request("tushu")=0 then
-	response.Write "<script language=javascript>alert('ÇëÑ¡ÔñÍ¼ÊéÃû³Æ£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·é€‰æ‹©å›¾ä¹¦åç§°ï¼');history.go(-1);</script>"
 	response.end
 end if
 if Request("banci")="" then
-	response.Write "<script language=javascript>alert('ÇëÌîĞ´Í¼Êé°æ´Î£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·å¡«å†™å›¾ä¹¦ç‰ˆæ¬¡ï¼');history.go(-1);</script>"
 	response.end
 end if
 if Request("yingci")="" then
-	response.Write "<script language=javascript>alert('ÇëÌîĞ´Í¼ÊéÓ¡´Î£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·å¡«å†™å›¾ä¹¦å°æ¬¡ï¼');history.go(-1);</script>"
 	response.end
 end if
 if Request("shuliang")="" then
-	response.Write "<script language=javascript>alert('ÇëÌîĞ´Éú³É¼¤»îÂëÊıÁ¿£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·å¡«å†™ç”Ÿæˆæ¿€æ´»ç æ•°é‡ï¼');history.go(-1);</script>"
 	response.end
 end if
 if not isnumeric(request.form("shuliang"))  then
-	response.Write "<script language=javascript>alert('Éú³É¼¤»îÂëÊıÁ¿±ØĞëÓÃÊı×Ö±íÊ¾£¬ÇëÕıÈ·²Ù×÷£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('ç”Ÿæˆæ¿€æ´»ç æ•°é‡å¿…é¡»ç”¨æ•°å­—è¡¨ç¤ºï¼Œè¯·æ­£ç¡®æ“ä½œï¼');history.go(-1);</script>"
 	response.end
 end if
-'»ñÈ¡±êºÅ
+'è·å–æ ‡å·
 	set rs=server.CreateObject("adodb.recordset") 
 	sql="select * from tushu where id='"&request("tushu")&"'"
 	rs.Open sql,conn,1,1
     bianhao=rs("bianhao")
 	rs.close
 	set rs=nothing
-	'ÅĞ¶ÏÊÇ·ñÓĞ´ËÅú´ÎµÄ
+	'åˆ¤æ–­æ˜¯å¦æœ‰æ­¤æ‰¹æ¬¡çš„
 	geshu=0
 	set rs=server.CreateObject("adodb.recordset") 
 	sql="select * from jihuoma where banci='"&request("banci")&"' and yingci='"&request("yingci")&"' and tushu='"&request("tushu")&"'"
@@ -48,7 +48,7 @@ end if
 	rs.close
 	set rs=nothing
 		
-'¼¤»îÂëºÍÊıÁ¿
+'æ¿€æ´»ç å’Œæ•°é‡
 	for i=1 to request("shuliang")
 		biaoji=now()
 		biaoji=replace(biaoji,"/","")
@@ -84,10 +84,10 @@ end if
 			aa=i
 		end if
 		
-		'ĞòÁĞºÅ
+		'åºåˆ—å·
 		xuliehao=bianhao&request("banci")&request("yingci")&(geshu+i)
 
-		'´æÈëÊı¾İ
+		'å­˜å…¥æ•°æ®
 		set rs=server.CreateObject("adodb.recordset") 
 		sql="select * from jihuoma"
 		rs.Open sql,conn,1,3
@@ -110,7 +110,7 @@ end if
 	next
 
 
-	response.Write "<script language=javascript>alert('³É¹¦·¢²¼£¡');location.href='jihuo.aspx';</script>"
+	response.Write "<script language=javascript>alert('æˆåŠŸå‘å¸ƒï¼');location.href='jihuo.aspx';</script>"
 	response.end
 
 end if
@@ -121,16 +121,13 @@ end if
    %>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">ÅúÁ¿Éú³É¼¤»îÂë</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÏµÍ³ÉèÖÃ &gt; Éú³É¼¤»îÂë &gt; ÅúÁ¿Éú³É¼¤»îÂë</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; ç³»ç»Ÿè®¾ç½® &gt; ç”Ÿæˆæ¿€æ´»ç  &gt; æ‰¹é‡ç”Ÿæˆæ¿€æ´»ç </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />ÅúÁ¿Éú³É¼¤»îÂë</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />æ‰¹é‡ç”Ÿæˆæ¿€æ´»ç </td>
   </tr>
   <tr>
     <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px; padding-top:10px;">
@@ -141,12 +138,12 @@ end if
     <tr>
       <td align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="157" height="30" align="right" class="content">Í¼ÊéÃû³Æ£º</td>
+          <td width="157" height="30" align="right" class="content">å›¾ä¹¦åç§°ï¼š</td>
           <td width="1022"  align="left">
 		  
 		  
 		  <select name="tushu">
-			  	<option value="0">ÇëÑ¡ÔñÍ¼Êé</option>
+			  	<option value="0">è¯·é€‰æ‹©å›¾ä¹¦</option>
 
 <%
 	SQL="select * from tushu order by id desc"
@@ -164,24 +161,24 @@ end if
               </select></td>
         </tr>
         <tr>
-          <td height="30" align="right" class="content">Í¼Êé°æ´Î£º</td>
+          <td height="30" align="right" class="content">å›¾ä¹¦ç‰ˆæ¬¡ï¼š</td>
           <td  align="left"><input name="banci" type="text" id="banci" size="50"/>
             <span class="hong">*</span></td>
         </tr>
         <tr>
-          <td height="30" align="right" class="content">Í¼ÊéÓ¡´Î£º</td>
+          <td height="30" align="right" class="content">å›¾ä¹¦å°æ¬¡ï¼š</td>
           <td  align="left"><input name="yingci" type="text" id="yingci" size="50"/>
             <span class="hong">*</span></td>
         </tr>
         <tr>
-          <td height="30" align="right" class="content">Éú³É¼¤»îÂëÊıÁ¿£º</td>
+          <td height="30" align="right" class="content">ç”Ÿæˆæ¿€æ´»ç æ•°é‡ï¼š</td>
           <td  align="left"><input name="shuliang" type="text" id="shuliang" size="50"/>
             <span class="hong">*</span></td>
         </tr>
         <tr>
           <td height="30" align="right" class="content">&nbsp;</td>
-          <td height="40" align="left" valign="middle"><input type="submit" name="Submit" value="ÅúÁ¿Éú³É¼¤»îÂë" />
-            <input type="button" name="Submit2" value="·µ»ØÉÏÒ»Ò³" onclick='JavaScript:history.go(-1);' /></td>
+          <td height="40" align="left" valign="middle"><input type="submit" name="Submit" value="æ‰¹é‡ç”Ÿæˆæ¿€æ´»ç " />
+            <input type="button" name="Submit2" value="è¿”å›ä¸Šä¸€é¡µ" onclick='JavaScript:history.go(-1);' /></td>
         </tr>
       </table>
         </td>

@@ -1,8 +1,8 @@
-
+ï»¿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%=request.Cookies("bj")("webname")%></title>
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
@@ -12,19 +12,16 @@
 <body>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">¹ã¸æ¹ÜÀí</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÏµÍ³ÉèÖÃ &gt; ¹ã¸æ¹ÜÀí</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; ç³»ç»Ÿè®¾ç½® &gt; å¹¿å‘Šç®¡ç†</td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />¹ã¸æ¹ÜÀí</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />å¹¿å‘Šç®¡ç†</td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
+    <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px;">
 
 
 
@@ -35,7 +32,7 @@
 <%
 
 if isnumeric(Request("page"))=false then
-	response.Write "<script language=javascript>alert('ÊäÈë´íÎó£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¾“å…¥é”™è¯¯ï¼');history.go(-1);</script>"
 	response.end
 end if
 
@@ -59,7 +56,7 @@ rs.Open SQL,conn,1,1
 
 msg_per_page=8
 if (Request("page")-1)*msg_per_page-rs.recordcount>0 then
-	response.Write "<script language=javascript>alert('ÊäÈë´íÎó£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¾“å…¥é”™è¯¯ï¼');history.go(-1);</script>"
 	response.end
 end if
 %>
@@ -71,23 +68,23 @@ end if
                <table width="99%" height="40" border="0" align="center" cellspacing="0" class="content">
                  <tr valign="top">
                    <form id="form2" name="form2" method="post" action="?">
-				   <td height="30" align="left" valign="middle">²éÑ¯£º °´
+				   <td height="30" align="left" valign="middle">æŸ¥è¯¢ï¼š æŒ‰
                      <select name="type" id="type">
-                         <option value="1">¹ã¸æÃû³Æ</option>
+                         <option value="1">å¹¿å‘Šåç§°</option>
                      </select>
                        <input name="search" type="text" id="search" size="20" />
                        <select name="select" id="select">
-					  	 <option value="" selected="selected">ËùÓÐÎ»ÖÃ</option>
-                         <option value="1">µÇÂ¼½çÃæ</option>
-                         <option value="2">×¢²á½çÃæ</option>
-                         <option value="3">¼¤»îÂë½çÃæ</option>
-                         <option value="4">²¥·Å½çÃæ</option>
+					  	 <option value="" selected="selected">æ‰€æœ‰ä½ç½®</option>
+                         <option value="1">ç™»å½•ç•Œé¢</option>
+                         <option value="2">æ³¨å†Œç•Œé¢</option>
+                         <option value="3">æ¿€æ´»ç ç•Œé¢</option>
+                         <option value="4">æ’­æ”¾ç•Œé¢</option>
                        </select>
-                       <input name="Submit2" type="submit" id="Submit" value="²éÑ¯" />
+                       <input name="Submit2" type="submit" id="Submit" value="æŸ¥è¯¢" />
 					 </td>
 					   
 				      </form>
-                   <td align="right" valign="middle"><input name="Submit2" type="submit" id="Submit" value="Ìí¼Ó¹ã¸æ" onclick="javascript:location.href='guanggaoadd.aspx'" /></td>
+                   <td align="right" valign="middle"><input name="Submit2" type="submit" id="Submit" value="æ·»åŠ å¹¿å‘Š" onclick="javascript:location.href='guanggaoadd.aspx'" /></td>
                  </tr>
                </table>
            </td>
@@ -95,11 +92,11 @@ end if
          <tr>
            <td><table width="99%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="999999">
                <tr bgcolor="#E3E3E3">
-                 <td height="35" align="center">¹ã¸æÃû³Æ</td>
-                 <td height="35" align="center">¹ã¸æÎ»ÖÃ</td>
-                 <td height="35" align="center">Í¼Æ¬</td>
-                 <td align="center">¹ã¸æ³¬Á´½Ó</td>
-                 <td height="35" align="center">²Ù×÷·½·¨</td>
+                 <td height="35" align="center">å¹¿å‘Šåç§°</td>
+                 <td height="35" align="center">å¹¿å‘Šä½ç½®</td>
+                 <td height="35" align="center">å›¾ç‰‡</td>
+                 <td align="center">å¹¿å‘Šè¶…é“¾æŽ¥</td>
+                 <td height="35" align="center">æ“ä½œæ–¹æ³•</td>
                </tr>
 <%
 		  	dim i
@@ -112,13 +109,13 @@ end if
 					 <%
 					 	select case rs("leibie")
 							case 1
-								response.write "µÇÂ¼½çÃæ"
+								response.write "ç™»å½•ç•Œé¢"
 							case 2
-								response.write "×¢²á½çÃæ"
+								response.write "æ³¨å†Œç•Œé¢"
 							case 3
-								response.write "¼¤»îÂë½çÃæ"
+								response.write "æ¿€æ´»ç ç•Œé¢"
 							case 4
-								response.write "²¥·Å½çÃæ"
+								response.write "æ’­æ”¾ç•Œé¢"
 						end select
 					 
 					 %>
@@ -126,8 +123,8 @@ end if
                  <td  height="35" align="center" class="content"><img src="<%=rs("img")%>" width="300" height="150"/></td>
                  <td align="center" class="content"><%=rs("url")%></td>
                  <td height="35" align="center" class="content">
-				 <a href="guanggaoxiugai.aspx?id=<%=rs("id")%>">ÐÞ¸Ä</a>&nbsp;
-				 <a href="guanggaodel.aspx?id=<%=rs("id")%>"  onClick="javascript:if(!confirm('\nÌØ±ðÌáÊ¾!É¾³ýºó½«ÎÞ·¨½øÐÐ»Ö¸´¡£'))  return  false; ">É¾³ý</a>&nbsp;</td>
+				 <a href="guanggaoxiugai.aspx?id=<%=rs("id")%>">ä¿®æ”¹</a>&nbsp;
+				 <a href="guanggaodel.aspx?id=<%=rs("id")%>"  onClick="javascript:if(!confirm('\nç‰¹åˆ«æç¤º!åˆ é™¤åŽå°†æ— æ³•è¿›è¡Œæ¢å¤ã€‚'))  return  false; ">åˆ é™¤</a>&nbsp;</td>
                </tr>
                <%
 			  i=i+1
@@ -147,13 +144,13 @@ end if
              <td height="5"></td>
            </tr>
            <tr>
-             <td height="25" align="center">¡¾ <%=listPages("?type="&request("type")&"&search="&request("search")&"&select="&request("select")&"")%>
+             <td height="25" align="center">ã€ <%=listPages("?type="&request("type")&"&search="&request("search")&"&select="&request("select")&"")%>
                  <input name="page" type="text" size="5" />
                  <input name="type" type="hidden" id="type" value="<%=request("type")%>" size="5" />
                  <input name="search" type="hidden" id="search" value="<%=request("search")%>" size="5" />
                  <input name="select" type="hidden" id="select" value="<%=request("select")%>" size="5" />
-                 <input type="submit" name="Submit" value="×ª" style=" border:1px solid #999999; "/>
-               ¡¿ </td>
+                 <input type="submit" name="Submit" value="è½¬" style=" border:1px solid #999999; "/>
+               ã€‘ </td>
            </tr>
          </table>
        </form>

@@ -4,6 +4,7 @@ body{ padding:0; margin:0; font-family:"微软雅黑"; font-size:12px; }
 
 input{ 
 border:1px #CCCCCC solid;
+padding: 2px 4px;
 }
 .title{
 font-size:30px;
@@ -60,4 +61,8 @@ font-size:15px;}
 
 .hong{
 color:#FF0000
+}
+
+select {
+	padding: 1px 4px;
 }

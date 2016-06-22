@@ -1,4 +1,4 @@
-<!--#include file="../../conn.aspx"-->
+ï»¿<!--#include file="../../conn.aspx"-->
 <!--#include file="Inc/UpLoadClass.aspx" -->
 <!--#include file="Inc/Code2Info.en.aspx" -->
 <%
@@ -11,7 +11,7 @@
 		Set UpFile = New UpLoadClass
 		UpFile.SavePath = SavePath
 		UpFile.MaxSize  = 1500*1024
-		UpFile.FileType = "jpg/gif"
+		UpFile.FileType = "jpg/gif/png"
 		UpFile.Open()
 		set Rs=server.createobject("adodb.recordset")	
 		
@@ -26,7 +26,7 @@
 		Rs.Update
 		Rs.Close
 		set rs=nothing
-			response.Write "<script language=javascript>alert('²Ù×÷³É¹¦£¡');location.href='guanggao.aspx';</script>"
+			response.Write "<script language=javascript>alert('æ“ä½œæˆåŠŸï¼');location.href='guanggao.aspx';</script>"
 	response.end
 
 	%>

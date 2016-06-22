@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%=request.Cookies("bj")("webname")%></title>
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
@@ -11,16 +11,16 @@
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">×îÐÂ×ÊÑ¶</td>
+    <td height="80" colspan="2">æœ€æ–°èµ„è®¯</td>
   </tr>
   <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÐÂÎÅ×ÊÑ¶ &gt; ×îÐÂ×ÊÑ¶</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; æ–°é—»èµ„è®¯ &gt; æœ€æ–°èµ„è®¯</td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />×îÐÂ×ÊÑ¶</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />æœ€æ–°èµ„è®¯</td>
   </tr>
   <tr>
     <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px; padding-top:10px;">
@@ -28,7 +28,7 @@
 <%
 
 if isnumeric(Request("page"))=false then
-	response.Write "<script language=javascript>alert('ÊäÈë´íÎó£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¾“å…¥é”™è¯¯ï¼');history.go(-1);</script>"
 	response.end
 end if
 
@@ -56,7 +56,7 @@ rs.Open SQL,conn,1,1
 
 msg_per_page=20
 if (Request("page")-1)*msg_per_page-rs.recordcount>0 then
-	response.Write "<script language=javascript>alert('ÊäÈë´íÎó£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¾“å…¥é”™è¯¯ï¼');history.go(-1);</script>"
 	response.end
 end if
 %>
@@ -68,13 +68,13 @@ end if
                  
                  <tr valign="top">
                    <form id="form2" name="form2" method="post" action="?">
-				   <td height="30" align="left" valign="middle">²éÑ¯£º °´ÐÂÎÅ±êÌâ
+				   <td height="30" align="left" valign="middle">æŸ¥è¯¢ï¼š æŒ‰æ–°é—»æ ‡é¢˜
                      
                        <input name="search" type="text" id="search" size="20" />
                        <input name="shijian1" type="text" style="width:100px" onfocus="HS_setDate(this)" value="<%=session("date1")%>" />
 -
 <input name="shijian2" type="text" style="width:100px" onfocus="HS_setDate(this)" value="<%=session("date2")%>" />
-<input name="Submit2" type="submit" id="Submit" value="²éÑ¯" />					 </td>
+<input name="Submit2" type="submit" id="Submit" value="æŸ¥è¯¢" />					 </td>
 			       </form>
                  </tr>
 				
@@ -82,9 +82,9 @@ end if
 
 <table width="99%" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="c1c1c1">
   <tr class="titlea1" bgcolor="#e1e1e1">
-    <td height="40" align="center">ÐÂÎÅ±êÌâ</td>
-    <td width="200" height="40" align="center">·¢²¼Ê±¼ä</td>
-    <td width="100" height="40" align="center">²Ù×÷</td>
+    <td height="40" align="center">æ–°é—»æ ‡é¢˜</td>
+    <td width="200" height="40" align="center">å‘å¸ƒæ—¶é—´</td>
+    <td width="100" height="40" align="center">æ“ä½œ</td>
   </tr>
 <%
 		  	dim i
@@ -95,8 +95,8 @@ end if
     <td height="35" align="center"><%=rs("title")%></td>
     <td height="35" align="center"><%=rs("addtime")%></td>
     <td height="35" align="center">
-			<a href="del.aspx?id=<%=rs("id")%>"   onclick="javascript:if(!confirm('\nÌØ±ðÌáÊ¾£¡£¿\n\nÉ¾³ýºó½«ÎÞ·¨½øÐÐ»Ö¸´¡£'))  return  false; ">É¾³ý</a> 
-			<a href="update.aspx?id=<%=rs("id")%>">ÐÞ¸Ä</a>	</td>
+			<a href="del.aspx?id=<%=rs("id")%>"   onclick="javascript:if(!confirm('\nç‰¹åˆ«æç¤ºï¼ï¼Ÿ\n\nåˆ é™¤åŽå°†æ— æ³•è¿›è¡Œæ¢å¤ã€‚'))  return  false; ">åˆ é™¤</a> 
+			<a href="update.aspx?id=<%=rs("id")%>">ä¿®æ”¹</a>	</td>
   </tr>
   <%
 			  i=i+1
@@ -114,14 +114,14 @@ end if
       <td height="5"></td>
     </tr>
     <tr>
-      <td height="25" align="center">¡¾ <%=listPages("?search_condition="&request("search_condition")&"&select="&request("select")&"")%>
+      <td height="25" align="center">ã€ <%=listPages("?search_condition="&request("search_condition")&"&select="&request("select")&"")%>
             <input name="page" type="text" size="5" />
             <input name="select" type="hidden" id="select" value="<%=request("select")%>" size="5" />
             <input name="search_condition" type="hidden" id="search_condition" value="<%=request("search_condition")%>" size="5" />
             <input name="qishu_date1" type="hidden" id="qishu_date1" value="<%=request("qishu_date1")%>" size="5" />
             <input name="qishu_date2" type="hidden" id="qishu_date2" value="<%=request("qishu_date2")%>" size="5" />
-            <input type="submit" name="Submit" value="×ª" style=" border:1px solid #999999; "/>
-      ¡¿ </td>
+            <input type="submit" name="Submit" value="è½¬" style=" border:1px solid #999999; "/>
+      ã€‘ </td>
     </tr>
   </table>
 </form>

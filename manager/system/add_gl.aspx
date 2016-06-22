@@ -1,14 +1,14 @@
-<!-- #include file="../../conn.aspx" -->
+ï»¿<!-- #include file="../../conn.aspx" -->
 <!--#include file="../jiance.aspx"--> <%
 if Request("yuangong_name")="" or Request("yuangong_code")="" or Request("yuangong_pass")="" then
-  Response.Write "<script language=javascript>alert('ÇëÊäÈë¹ÜÀíÔ±±àºÅ¡¢ĞÕÃû¡¢ÃÜÂë£¡');history.go(-1);</script>"
+  Response.Write "<script language=javascript>alert('è¯·è¾“å…¥ç®¡ç†å‘˜ç¼–å·ã€å§“åã€å¯†ç ï¼');history.go(-1);</script>"
   Response.End 
 end if
 set Grp_oRs=server.CreateObject("adodb.recordset")
 sql = "select * from tbl_admin where huiyuan_bianhao='"&Request("yuangong_code")&"'"
 Grp_oRs.open sql,conn,1,3
 if Grp_oRs.recordcount>0 then 
-  Response.Write "<script language=javascript>alert('ÒÑ¾­ÓĞ¸Ã¹ÜÀíÔ±,ÎŞ·¨ÖØ¸´Ìí¼Ó£¡');history.go(-1);</script>"
+  Response.Write "<script language=javascript>alert('å·²ç»æœ‰è¯¥ç®¡ç†å‘˜,æ— æ³•é‡å¤æ·»åŠ ï¼');history.go(-1);</script>"
   Response.End 
 else
      Grp_oRs.addnew
@@ -22,7 +22,7 @@ else
 end if
 
 'response.Redirect("bumen_set.aspx")
-Response.Write "<script language=javascript>alert('¹ÜÀíÔ±Ìí¼Ó³É¹¦£¡');location.href='manage.aspx';</script>"
+Response.Write "<script language=javascript>alert('ç®¡ç†å‘˜æ·»åŠ æˆåŠŸï¼');location.href='manage.aspx';</script>"
 Response.End 
 %>
 

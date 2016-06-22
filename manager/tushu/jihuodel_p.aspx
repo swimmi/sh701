@@ -1,33 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--#include file="../../conn.aspx"-->
 <!--#include file="md5.aspx"-->
 <%	 
-if request.form("submit")="ÅúÁ¿Éú³É¼¤»îÂë" then
+if request.form("submit")="æ‰¹é‡ç”Ÿæˆæ¿€æ´»ç " then
 
 if Request("tushu")=0 then
-	response.Write "<script language=javascript>alert('ÇëÑ¡ÔñÍ¼ÊéÃû³Æ£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·é€‰æ‹©å›¾ä¹¦åç§°ï¼');history.go(-1);</script>"
 	response.end
 end if
 if Request("banci")="" then
-	response.Write "<script language=javascript>alert('ÇëÌîĞ´Í¼Êé°æ´Î£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·å¡«å†™å›¾ä¹¦ç‰ˆæ¬¡ï¼');history.go(-1);</script>"
 	response.end
 end if
 if Request("yingci")="" then
-	response.Write "<script language=javascript>alert('ÇëÌîĞ´Í¼ÊéÓ¡´Î£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·å¡«å†™å›¾ä¹¦å°æ¬¡ï¼');history.go(-1);</script>"
 	response.end
 end if
 if Request("shuliang")="" then
-	response.Write "<script language=javascript>alert('ÇëÌîĞ´Éú³É¼¤»îÂëÊıÁ¿£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·å¡«å†™ç”Ÿæˆæ¿€æ´»ç æ•°é‡ï¼');history.go(-1);</script>"
 	response.end
 end if
 if not isnumeric(request.form("shuliang"))  then
-	response.Write "<script language=javascript>alert('Éú³É¼¤»îÂëÊıÁ¿±ØĞëÓÃÊı×Ö±íÊ¾£¬ÇëÕıÈ·²Ù×÷£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('ç”Ÿæˆæ¿€æ´»ç æ•°é‡å¿…é¡»ç”¨æ•°å­—è¡¨ç¤ºï¼Œè¯·æ­£ç¡®æ“ä½œï¼');history.go(-1);</script>"
 	response.end
 end if
 
@@ -94,7 +94,7 @@ end if
 
 
 
-	response.Write "<script language=javascript>alert('³É¹¦·¢²¼£¡');location.href='jihuo.aspx';</script>"
+	response.Write "<script language=javascript>alert('æˆåŠŸå‘å¸ƒï¼');location.href='jihuo.aspx';</script>"
 	response.end
 
 end if
@@ -105,16 +105,13 @@ end if
    %>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">ÅúÁ¿Éú³É¼¤»îÂë</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÏµÍ³ÉèÖÃ &gt; Éú³É¼¤»îÂë &gt; ÅúÁ¿Éú³É¼¤»îÂë</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; ç³»ç»Ÿè®¾ç½® &gt; ç”Ÿæˆæ¿€æ´»ç  &gt; æ‰¹é‡ç”Ÿæˆæ¿€æ´»ç </td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />ÅúÁ¿Éú³É¼¤»îÂë</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />æ‰¹é‡ç”Ÿæˆæ¿€æ´»ç </td>
   </tr>
   <tr>
     <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px; padding-top:10px;">
@@ -127,12 +124,12 @@ end if
 	  
 	  <table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="157" height="30" align="right" class="content">Í¼ÊéÃû³Æ£º</td>
+          <td width="157" height="30" align="right" class="content">å›¾ä¹¦åç§°ï¼š</td>
           <td width="1022"  align="left">
 		  
 		  
 		  <select name="tushu">
-			  	<option value="0">ÇëÑ¡ÔñÍ¼Êé</option>
+			  	<option value="0">è¯·é€‰æ‹©å›¾ä¹¦</option>
 
 <%
 	SQL="select * from tushu order by id desc"
@@ -150,18 +147,18 @@ end if
               </select></td>
         </tr>
         <tr>
-          <td height="30" align="right" class="content">Í¼Êé°æ´Î£º</td>
+          <td height="30" align="right" class="content">å›¾ä¹¦ç‰ˆæ¬¡ï¼š</td>
           <td  align="left"><input name="banci" type="text" id="banci" size="50"/><input name="action" type="hidden" id="action" size="50" value="del"/>
             <span class="hong">*</span></td>
         </tr>
         <tr>
-          <td height="30" align="right" class="content">Í¼ÊéÓ¡´Î£º</td>
+          <td height="30" align="right" class="content">å›¾ä¹¦å°æ¬¡ï¼š</td>
           <td  align="left"><input name="yingci" type="text" id="yingci" size="50"/>
             <span class="hong">*</span></td>
         </tr>
         <tr>
           <td height="30" align="right" class="content">&nbsp;</td>
-          <td height="40" align="left" valign="middle"><input type="submit" name="Submit" value="²éÑ¯" /></td>
+          <td height="40" align="left" valign="middle"><input type="submit" name="Submit" value="æŸ¥è¯¢" /></td>
         </tr>
       </table>
 	  
@@ -177,7 +174,7 @@ end if
         <td height="30" align="right">
 		
 		<div style="width:50px; height:20px; cursor:pointer; border:1px #CCCCCC solid; background-color:#f1f1f1">
-		<a href="jihuodel_p2.aspx?tushu=<%=request("tushu")%>&banci=<%=request("banci")%>&yingci=<%=request("yingci")%>"  onClick="javascript:if(!confirm('\nÌØ±ğÌáÊ¾!É¾³ıºó½«ÎŞ·¨½øĞĞ»Ö¸´¡£'))  return  false; ">È«²¿É¾³ı</a>
+		<a href="jihuodel_p2.aspx?tushu=<%=request("tushu")%>&banci=<%=request("banci")%>&yingci=<%=request("yingci")%>"  onClick="javascript:if(!confirm('\nç‰¹åˆ«æç¤º!åˆ é™¤åå°†æ— æ³•è¿›è¡Œæ¢å¤ã€‚'))  return  false; ">å…¨éƒ¨åˆ é™¤</a>
 		</div>
 		
 		
@@ -185,14 +182,14 @@ end if
     </table>
 	<table width="99%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="999999">
 	  <tr bgcolor="#E3E3E3">
-		<td height="35" align="center">Í¼ÊéĞòÁĞºÅ</td>
-		<td height="35" align="center">Í¼ÊéÃû³Æ</td>
-		<td height="35" align="center">Í¼ÊéISBN</td>
-		<td align="center">Í¼Êé°æ´Î</td>
-		<td align="center">Í¼ÊéÓ¡´Î</td>
-		<td align="center">¼¤»îÂë</td>
-		<td align="center">Éú³ÉÈÕÆÚ</td>
-		<td height="35" align="center">²Ù×÷·½·¨</td>
+		<td height="35" align="center">å›¾ä¹¦åºåˆ—å·</td>
+		<td height="35" align="center">å›¾ä¹¦åç§°</td>
+		<td height="35" align="center">å›¾ä¹¦ISBN</td>
+		<td align="center">å›¾ä¹¦ç‰ˆæ¬¡</td>
+		<td align="center">å›¾ä¹¦å°æ¬¡</td>
+		<td align="center">æ¿€æ´»ç </td>
+		<td align="center">ç”Ÿæˆæ—¥æœŸ</td>
+		<td height="35" align="center">æ“ä½œæ–¹æ³•</td>
 	  </tr>
 	  <%
 	  
@@ -223,7 +220,7 @@ end if
 		<td align="center" class="content"><%=rs("yingci")%></td>
 		<td align="center" class="content"><%=rs("jihuoma")%></td>
 		<td align="center" class="content"><%=rs("addtime")%></td>
-		<td align="center" class="content"><a href="jihuodel_p1.aspx?id=<%=rs("id")%>&tushu=<%=request("tushu")%>&banci=<%=request("banci")%>&yingci=<%=request("yingci")%>"  onclick="javascript:if(!confirm('\nÌØ±ğÌáÊ¾!É¾³ıºó½«ÎŞ·¨½øĞĞ»Ö¸´¡£'))  return  false; ">É¾³ı</a>&nbsp;</td>
+		<td align="center" class="content"><a href="jihuodel_p1.aspx?id=<%=rs("id")%>&tushu=<%=request("tushu")%>&banci=<%=request("banci")%>&yingci=<%=request("yingci")%>"  onclick="javascript:if(!confirm('\nç‰¹åˆ«æç¤º!åˆ é™¤åå°†æ— æ³•è¿›è¡Œæ¢å¤ã€‚'))  return  false; ">åˆ é™¤</a>&nbsp;</td>
 	  </tr>
 	<%
 		rs.movenext

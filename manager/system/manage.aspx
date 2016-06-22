@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%=request.Cookies("bj")("webname")%></title>
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
@@ -15,16 +15,13 @@
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">¹ÜÀíÔ±ÕÊºÅ¹ÜÀí</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÆóÒµÕÊºÅ &gt; ¹ÜÀíÔ±ÕÊºÅ¹ÜÀí</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; ä¼ä¸šå¸å· &gt; ç®¡ç†å‘˜å¸å·ç®¡ç†</td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />¹ÜÀíÔ±ÕÊºÅ¹ÜÀí</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />ç®¡ç†å‘˜å¸å·ç®¡ç†</td>
   </tr>
   <tr>
     <td  align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
@@ -32,10 +29,10 @@
 
 		<table width="99%" border="0" cellpadding="1" cellspacing="1" bgcolor="#999999">
 		  <tr bgcolor="#e3e3e3" class="titlea1">
-			<td height="40" align="center" >¹ÜÀíÔ±´úÂë</td>
-			<td height="40" align="center" >¹ÜÀíÔ±ÐÕÃû</td>
-			<td height="40" align="center" >¹ÜÀíÔ±µÇÂ½ÃÜÂë</td>
-			<td height="40" align="center" >²Ù×÷</td>
+			<td height="40" align="center" >ç®¡ç†å‘˜ä»£ç </td>
+			<td height="40" align="center" >ç®¡ç†å‘˜å§“å</td>
+			<td height="40" align="center" >ç®¡ç†å‘˜ç™»é™†å¯†ç </td>
+			<td height="40" align="center" >æ“ä½œ</td>
 		  </tr>
 		<% 
 		set Grp_oRs=server.CreateObject("adodb.recordset")
@@ -58,8 +55,8 @@
 				<input name="yuangong_pass" type="text" id="yuangong_pass" value="<%=Grp_oRs("huiyuan_pass")%>" size="15" maxlength="6" readonly="" />
 			  </td>
 			  <td height="35" align="center" class="content">
-				<input type="submit" name="Submit3" value="É¾³ý" onClick="javascript:if(!confirm('\nÌØ±ðÌáÊ¾£¡\n\nÇëÉ÷ÖØ½øÐÐ¸Ã²Ù×÷£¡\nÉ¾³ýºó½«ÎÞ·¨½øÐÐ»Ö¸´¡£'))  return  false;" />
-			  <a href="manage_add.aspx?id=<%=Grp_oRs("id")%>">ÏêÏ¸</a> </td>
+				<input type="submit" name="Submit3" value="åˆ é™¤" onClick="javascript:if(!confirm('\nç‰¹åˆ«æç¤ºï¼\n\nè¯·æ…Žé‡è¿›è¡Œè¯¥æ“ä½œï¼\nåˆ é™¤åŽå°†æ— æ³•è¿›è¡Œæ¢å¤ã€‚'))  return  false;" />
+			  <a href="manage_add.aspx?id=<%=Grp_oRs("id")%>">è¯¦ç»†</a> </td>
 			</tr>
 		  </form>
 		  <% Grp_oRs.movenext:loop:Grp_oRs.close %>
@@ -68,7 +65,7 @@
 			  <td height="35" align="center" bgcolor="#FFFFFF"><input name="yuangong_code" type="text" id="yuangong_code" size="15" maxlength="20" /></td>
 			  <td height="35" align="center" bgcolor="#FFFFFF"><input name="yuangong_name" type="text" id="yuangong_name" size="20" maxlength="20" /></td>
 			  <td height="35" align="center" bgcolor="#FFFFFF"><input name="yuangong_pass" type="text" id="GroupCode" size="15" maxlength="20" /></td>
-			  <td height="35" align="center" bgcolor="#FFFFFF"><input type="submit" name="Submit" value="Ìí¼Ó" /></td>
+			  <td height="35" align="center" bgcolor="#FFFFFF"><input type="submit" name="Submit" value="æ·»åŠ " /></td>
 			</tr>
 		  </form>
 		</table>

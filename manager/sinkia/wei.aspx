@@ -1,8 +1,8 @@
-
+ï»¿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%=request.Cookies("bj")("webname")%></title>
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
@@ -12,16 +12,16 @@
 <body>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">¶şÎ¬Âë¹ÜÀí</td>
+    <td height="80" colspan="2">äºŒç»´ç ç®¡ç†</td>
   </tr>
   <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÊÓÆµ¹ÜÀí &gt; ¶şÎ¬Âë¹ÜÀí</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; è§†é¢‘ç®¡ç† &gt; äºŒç»´ç ç®¡ç†</td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />¶şÎ¬Âë¹ÜÀí</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />äºŒç»´ç ç®¡ç†</td>
   </tr>
   <tr>
     <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
@@ -34,10 +34,10 @@
 	 
 	 
 		<form id="form1" name="form1" method="post" action="weib.aspx">
-			<table border="0" cellpadding="0" cellspacing="0">
+			<table width="99%" border="0" cellpadding="0" cellspacing="0">
 				<tr>
-					<td width="80" align="right" style="font-size:12px;">Éú³É¶şÎ¬Âë£º</td>
-					<td align="left">
+					<td width="80" align="right" style="font-size:12px;">ç”ŸæˆäºŒç»´ç ï¼š</td>
+					<td align="left" width="200">
 					
 <%
     banci = request("banci")  
@@ -46,12 +46,12 @@
     set rs=server.createobject("adodb.recordset")   
     sql = "select banci  from jihuoma where tushu='"&request("tushu")&"' group by banci"   
     rs.open sql,conn,1,3
-    strOption3 = "<option value='' selected>ÇëÑ¡Ôñ°æ´Î</option>"
+    strOption3 = "<option value='' selected>è¯·é€‰æ‹©ç‰ˆæ¬¡</option>"
 	do while not rs.eof
 		if cstr(rs("banci")) = cstr(banci) then
-			strOption3 = strOption3 & "<option value='" & rs("banci") & "' selected>µÚ" & rs("banci") & "°æ</option>"
+			strOption3 = strOption3 & "<option value='" & rs("banci") & "' selected>ç¬¬" & rs("banci") & "ç‰ˆ</option>"
 		else
-			strOption3 = strOption3 & "<option value='" & rs("banci") & "'>µÚ" & rs("banci") & "°æ</option>"
+			strOption3 = strOption3 & "<option value='" & rs("banci") & "'>ç¬¬" & rs("banci") & "ç‰ˆ</option>"
 		end if 
 	rs.movenext    
 	loop 
@@ -60,12 +60,12 @@
 	if banci <> "" then
 		sql = "select yingci from jihuoma where tushu='"&request("tushu")&"' and banci='"&banci&"' group by yingci"   
 		rs.open sql,conn,1,3
-		strOption4 = "<option value='' selected>ÇëÑ¡ÔñÓ¡´Î</option>"
+		strOption4 = "<option value='' selected>è¯·é€‰æ‹©å°æ¬¡</option>"
 		do while not rs.eof
 			if cstr(rs("yingci")) = cstr(yingci) then
-				strOption4 = strOption4 & "<option value='" & rs("yingci") & "' selected>µÚ "&rs("yingci")& " ´Î</option>"
+				strOption4 = strOption4 & "<option value='" & rs("yingci") & "' selected>ç¬¬ "&rs("yingci")& " æ¬¡</option>"
 			else
-				strOption4 = strOption4 & "<option value='" & rs("yingci") & "'>µÚ " &  rs("yingci")  & " ´Î</option>"
+				strOption4 = strOption4 & "<option value='" & rs("yingci") & "'>ç¬¬ " &  rs("yingci")  & " æ¬¡</option>"
 			end if
 		rs.movenext    
 		loop   
@@ -89,53 +89,44 @@
      }
 -->
 </script>
-				
 				<input name="id" type="hidden" id="id" style="width:100px; height:20px;" value="<%=request("id")%>" />
 				<input name="tushu" type="hidden" id="tushu" style="width:100px; height:20px;" value="<%=request("tushu")%>" />
 				</td>
-				<td width="90" align="right"><input type="submit" name="Submit2" value="Éú³É¶şÎ¬Âë" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:15px; font-family:'Î¢ÈíÑÅºÚ';" onClick="if(confirm('ÄãÈ·¶¨Éú³É¶şÎ¬ÂëÂğ?')){return true;}else{return false;}"/></td>
-				</tr>
-			</table>
-		    </form>
-			
-			
-			
-			
-	<Br />		
+				<td align="left" width="90"><input type="submit" name="Submit2" value="ç”ŸæˆäºŒç»´ç " style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:15px; font-family:'å¾®è½¯é›…é»‘';" onClick="if(confirm('ä½ ç¡®å®šç”ŸæˆäºŒç»´ç å—?')){return true;}else{return false;}"/></td>
+				
 			
 <%
 	SQL="select * from weixing where tushuid='"&request("tushu")&"' and banci='"&request("banci")&"' and yingci='"&request("yingci")&"'"
 	set rs=server.CreateObject("adodb.recordset")
 	rs.Open SQL,conn,1,1
 %>		
-			
-			
-<table width="99%" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <td height="40" align="right"><input type="submit" name="Submit22" value="ÅúÁ¿µ¼³ö¶şÎ¬Âë" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'Î¢ÈíÑÅºÚ';" onClick="javascript:location.href='weidao.aspx?tushu=<%=request("tushu")%>&banci=<%=request("banci")%>&yingci=<%=request("yingci")%>&id=<%=request("id")%>'"/>
-      <input type="submit" name="Submit23" value="È«²¿É¾³ı" style="border:1px #CCCCCC solid; background-color:#FFCC00; line-height:20px; font-family:'Î¢ÈíÑÅºÚ';" onClick="javascript:if(!confirm('\nÌØ±ğÌáÊ¾!É¾³ıºó½«ÎŞ·¨½øĞĞ»Ö¸´¡£'))  return  false; location.href='weidel.aspx?tushu=<%=request("tushu")%>&banci=<%=request("banci")%>&yingci=<%=request("yingci")%>&id=<%=request("id")%>'"/></td>
-  </tr>
-</table>
+        <td align="right"><input type="submit" name="Submit22" value="æ‰¹é‡å¯¼å‡ºäºŒç»´ç " style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'å¾®è½¯é›…é»‘';" onClick="javascript:location.href='weidao.aspx?tushu=<%=request("tushu")%>&banci=<%=request("banci")%>&yingci=<%=request("yingci")%>&id=<%=request("id")%>'"/>
+        <input type="submit" name="Submit23" value="å…¨éƒ¨åˆ é™¤" style="border:1px #CCCCCC solid; background-color:#FFCC00; line-height:20px; font-family:'å¾®è½¯é›…é»‘';" onClick="javascript:if(!confirm('\nç‰¹åˆ«æç¤º!åˆ é™¤åå°†æ— æ³•è¿›è¡Œæ¢å¤ã€‚'))  return  false; location.href='weidel.aspx?tushu=<%=request("tushu")%>&banci=<%=request("banci")%>&yingci=<%=request("yingci")%>&id=<%=request("id")%>'"/>
+        </td>
+        </tr>
+			</table>
+    </form>
+	<Br />
 <table width="99%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="999999">
-               <tr bgcolor="#E3E3E3">
-                 <td height="30" align="center">ÊÓÆµ±àºÅ</td>
-                 <td height="30" align="center">ÊÓÆµÃû³Æ</td>
-                 <td height="30" align="center">Í¼ÊéÃû³Æ</td>
-                 <td height="30" align="center">Í¼ÊéĞòÁĞºÅ</td>
-                 <td height="30" align="center">¼¤»îÂë</td>
-                 <td align="center">¶şÎ¬ÂëÊÓÆµÁ´½Ó</td>
-                 <td height="30" align="center">²Ù×÷</td>
-               </tr>
+    <tr bgcolor="#E3E3E3">
+      <td height="30" align="center">è§†é¢‘ç¼–å·</td>
+      <td height="30" align="center">è§†é¢‘åç§°</td>
+      <td height="30" align="center">å›¾ä¹¦åç§°</td>
+      <td height="30" align="center">å›¾ä¹¦åºåˆ—å·</td>
+      <td height="30" align="center">æ¿€æ´»ç </td>
+      <td align="center">äºŒç»´ç è§†é¢‘é“¾æ¥</td>
+      <td height="30" align="center">æ“ä½œ</td>
+    </tr>
 <%do while not rs.eof%>
-               <tr bgcolor="FFFFFF" onMouseOver="this.style.backgroundColor='#F1F1F1'"  onmouseout="this.style.backgroundColor=''">
-                 <td align="center" class="content"><%=rs("videobianhao")%></td>
-                 <td align="center" class="content"><%=rs("videotitle")%></td>
-                 <td align="center" class="content"><%=rs("tushutitle")%></td>
-                 <td align="center" class="content"><%=rs("xuliehao")%></td>
-                 <td align="center" class="content"><%=rs("jihuoma")%></td>
-                 <td align="center" class="content">http://<%=Request.ServerVariables("SERVER_ADDR")%>:<%=Request.ServerVariables("SERVER_PORT")%>/video.aspx?videobianhao=<%=rs("videobianhao")%>&jihuoma=<%=rs("jihuoma")%></td>
-                 <td align="center" class="content"><a href="weilook.aspx?id=<%=rs("id")%>">Ô¤ÀÀ¶şÎ¬Âë</a></td>
-               </tr>
+    <tr bgcolor="FFFFFF" onMouseOver="this.style.backgroundColor='#F1F1F1'"  onmouseout="this.style.backgroundColor=''">
+      <td align="center" class="content"><%=rs("videobianhao")%></td>
+      <td align="center" class="content"><%=rs("videotitle")%></td>
+      <td align="center" class="content"><%=rs("tushutitle")%></td>
+      <td align="center" class="content"><%=rs("xuliehao")%></td>
+      <td align="center" class="content"><%=rs("jihuoma")%></td>
+      <td align="center" class="content">http://yezzj.91gaocai.com//video.aspx?bh=<%=rs("videobianhao")%>&jhm=<%=rs("jihuoma")%></td>
+      <td align="center" class="content"><a href="weilook.aspx?id=<%=rs("id")%>">é¢„è§ˆäºŒç»´ç </a></td>
+    </tr>
 <%
 	rs.movenext
 	loop

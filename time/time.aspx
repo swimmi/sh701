@@ -1,4 +1,4 @@
-<script type="text/javascript">
+ï»¿<script type="text/javascript">
 function HS_DateAdd(interval,number,date){
 	number = parseInt(number);
 	if (typeof(date)=="string"){var date = new Date(date.split("-")[0],date.split("-")[1],date.split("-")[2])}
@@ -16,7 +16,7 @@ function checkDate(year,month,date){
 	if (year%4==0){enddate[1]="29"}
 	if (date>enddate[month]){returnDate = enddate[month]}else{returnDate = date}
 	return returnDate;
-}//»¶Ó­À´µ½Õ¾³¤ÌØĞ§Íø£¬ÎÒÃÇµÄÍøÖ·ÊÇwww.zzjs.net£¬ºÜºÃ¼Ç£¬zzÕ¾³¤£¬js¾ÍÊÇjsÌØĞ§£¬±¾Õ¾ÊÕ¼¯´óÁ¿¸ßÖÊÁ¿js´úÂë£¬»¹ÓĞĞí¶à¹ã¸æ´úÂëÏÂÔØ¡£
+}//æ¬¢è¿æ¥åˆ°ç«™é•¿ç‰¹æ•ˆç½‘ï¼Œæˆ‘ä»¬çš„ç½‘å€æ˜¯www.zzjs.netï¼Œå¾ˆå¥½è®°ï¼Œzzç«™é•¿ï¼Œjså°±æ˜¯jsç‰¹æ•ˆï¼Œæœ¬ç«™æ”¶é›†å¤§é‡é«˜è´¨é‡jsä»£ç ï¼Œè¿˜æœ‰è®¸å¤šå¹¿å‘Šä»£ç ä¸‹è½½ã€‚
 function WeekDay(date){
 	var theDate;
 	if (typeof(date)=="string"){theDate = new Date(date.split("-")[0],date.split("-")[1],date.split("-")[2]);}
@@ -26,7 +26,7 @@ function WeekDay(date){
 function HS_calender(){
 	var lis = "";
 	var style = "";
-	/*¿ÉÒÔ°ÑÏÂÃæµÄcss¼ôÇĞ³öÈ¥¶ÀÁ¢Ò»¸öcssÎÄ¼şzzjs.net*/
+	/*å¯ä»¥æŠŠä¸‹é¢çš„csså‰ªåˆ‡å‡ºå»ç‹¬ç«‹ä¸€ä¸ªcssæ–‡ä»¶zzjs.net*/
 	style +="<style type='text/css'>";
 	style +=".calender { width:170px; height:auto; font-size:12px; margin-right:14px; background:url(calenderbg.gif) no-repeat right center #fff; border:1px solid #397EAE; padding:1px}";
 	style +=".calender ul {list-style-type:none; margin:0; padding:0;}";
@@ -86,12 +86,12 @@ function HS_calender(){
 	lis += style;
 	var CalenderTitle = "<a href='javascript:void(0)' class='NextMonth' onclick=HS_calender(HS_DateAdd('m',1,'"+now.getFullYear()+"-"+now.getMonth()+"-"+now.getDate()+"'),this) title='Next Month'><img src='../../time/right.jpg' border=0 /></a>";
 	CalenderTitle += "<a href='javascript:void(0)' class='LastMonth' onclick=HS_calender(HS_DateAdd('m',-1,'"+now.getFullYear()+"-"+now.getMonth()+"-"+now.getDate()+"'),this) title='Previous Month'><img src='../../time/left.jpg'  border=0/></a>";
-	CalenderTitle += "<span class='selectThisYear'><a href='javascript:void(0)' onclick='CalenderselectYear(this)' title='Click here to select other year' >"+now.getFullYear()+"</a></span>Äê<span class='selectThisMonth'><a href='javascript:void(0)' onclick='CalenderselectMonth(this)' title='Click here to select other month'>"+(parseInt(now.getMonth())+1).toString()+"</a></span>ÔÂ";
+	CalenderTitle += "<span class='selectThisYear'><a href='javascript:void(0)' onclick='CalenderselectYear(this)' title='Click here to select other year' >"+now.getFullYear()+"</a></span>å¹´<span class='selectThisMonth'><a href='javascript:void(0)' onclick='CalenderselectMonth(this)' title='Click here to select other month'>"+(parseInt(now.getMonth())+1).toString()+"</a></span>æœˆ";
 	if (arguments.length>1){
 		arguments[1].parentNode.parentNode.getElementsByTagName("ul")[1].innerHTML = lis;
 		arguments[1].parentNode.innerHTML = CalenderTitle;
 	}else{
-		var CalenderBox = style+"<div class='calender'><div class='calenderTitle'>"+CalenderTitle+"</div><div class='calenderBody'><ul class='day'><li>ÈÕ</li><li>Ò»</li><li>¶ş</li><li>Èı</li><li>ËÄ</li><li>Îå</li><li>Áù</li></ul><ul class='date' id='thisMonthDate'>"+lis+"</ul></div><div class='calenderBottom'><a href='javascript:void(0)' class='closeCalender' onclick='closeCalender(this)'>¹Ø±Õ</a><span><span><a href=javascript:void(0) onclick='_selectThisDay(this)' title='"+todayString+"'>½ñÈÕ</a></span></span></div></div>";
+		var CalenderBox = style+"<div class='calender'><div class='calenderTitle'>"+CalenderTitle+"</div><div class='calenderBody'><ul class='day'><li>æ—¥</li><li>ä¸€</li><li>äºŒ</li><li>ä¸‰</li><li>å››</li><li>äº”</li><li>å…­</li></ul><ul class='date' id='thisMonthDate'>"+lis+"</ul></div><div class='calenderBottom'><a href='javascript:void(0)' class='closeCalender' onclick='closeCalender(this)'>å…³é—­</a><span><span><a href=javascript:void(0) onclick='_selectThisDay(this)' title='"+todayString+"'>ä»Šæ—¥</a></span></span></div></div>";
 		return CalenderBox;
 	}
 }
@@ -103,7 +103,7 @@ function _selectThisDay(d){
 function closeCalender(d){
 	var boxObj = d.parentNode.parentNode.parentNode;
 		boxObj.parentNode.removeChild(boxObj);
-}//»¶Ó­À´µ½Õ¾³¤ÌØĞ§Íø£¬ÎÒÃÇµÄÍøÖ·ÊÇwww.zzjs.net£¬ºÜºÃ¼Ç£¬zzÕ¾³¤£¬js¾ÍÊÇjsÌØĞ§£¬±¾Õ¾ÊÕ¼¯´óÁ¿¸ßÖÊÁ¿js´úÂë£¬»¹ÓĞĞí¶à¹ã¸æ´úÂëÏÂÔØ¡£
+}//æ¬¢è¿æ¥åˆ°ç«™é•¿ç‰¹æ•ˆç½‘ï¼Œæˆ‘ä»¬çš„ç½‘å€æ˜¯www.zzjs.netï¼Œå¾ˆå¥½è®°ï¼Œzzç«™é•¿ï¼Œjså°±æ˜¯jsç‰¹æ•ˆï¼Œæœ¬ç«™æ”¶é›†å¤§é‡é«˜è´¨é‡jsä»£ç ï¼Œè¿˜æœ‰è®¸å¤šå¹¿å‘Šä»£ç ä¸‹è½½ã€‚
 function CalenderselectYear(obj){
 		var opt = "";
 		var thisYear = obj.innerHTML;
@@ -119,7 +119,7 @@ function CalenderselectYear(obj){
 }
 function selectThisYear(obj){
 	HS_calender(obj.value+"-"+obj.parentNode.parentNode.getElementsByTagName("span")[1].getElementsByTagName("a")[0].innerHTML+"-1",obj.parentNode);
-}//»¶Ó­À´µ½Õ¾³¤ÌØĞ§Íø£¬ÎÒÃÇµÄÍøÖ·ÊÇwww.zzjs.net£¬ºÜºÃ¼Ç£¬zzÕ¾³¤£¬js¾ÍÊÇjsÌØĞ§£¬±¾Õ¾ÊÕ¼¯´óÁ¿¸ßÖÊÁ¿js´úÂë£¬»¹ÓĞĞí¶à¹ã¸æ´úÂëÏÂÔØ¡£
+}//æ¬¢è¿æ¥åˆ°ç«™é•¿ç‰¹æ•ˆç½‘ï¼Œæˆ‘ä»¬çš„ç½‘å€æ˜¯www.zzjs.netï¼Œå¾ˆå¥½è®°ï¼Œzzç«™é•¿ï¼Œjså°±æ˜¯jsç‰¹æ•ˆï¼Œæœ¬ç«™æ”¶é›†å¤§é‡é«˜è´¨é‡jsä»£ç ï¼Œè¿˜æœ‰è®¸å¤šå¹¿å‘Šä»£ç ä¸‹è½½ã€‚
 function CalenderselectMonth(obj){
 		var opt = "";
 		var thisMonth = obj.innerHTML;
@@ -132,7 +132,7 @@ function CalenderselectMonth(obj){
 		}
 		opt = "<select onblur='selectThisMonth(this)' onchange='selectThisMonth(this)' style='font-size:11px'>"+opt+"</select>";
 		obj.parentNode.innerHTML = opt;
-}//»¶Ó­À´µ½Õ¾³¤ÌØĞ§Íø£¬ÎÒÃÇµÄÍøÖ·ÊÇwww.zzjs.net£¬ºÜºÃ¼Ç£¬zzÕ¾³¤£¬js¾ÍÊÇjsÌØĞ§£¬±¾Õ¾ÊÕ¼¯´óÁ¿¸ßÖÊÁ¿js´úÂë£¬»¹ÓĞĞí¶à¹ã¸æ´úÂëÏÂÔØ¡£
+}//æ¬¢è¿æ¥åˆ°ç«™é•¿ç‰¹æ•ˆç½‘ï¼Œæˆ‘ä»¬çš„ç½‘å€æ˜¯www.zzjs.netï¼Œå¾ˆå¥½è®°ï¼Œzzç«™é•¿ï¼Œjså°±æ˜¯jsç‰¹æ•ˆï¼Œæœ¬ç«™æ”¶é›†å¤§é‡é«˜è´¨é‡jsä»£ç ï¼Œè¿˜æœ‰è®¸å¤šå¹¿å‘Šä»£ç ä¸‹è½½ã€‚
 function selectThisMonth(obj){
 	HS_calender(obj.parentNode.parentNode.getElementsByTagName("span")[0].getElementsByTagName("a")[0].innerHTML+"-"+obj.value+"-1",obj.parentNode);
 }
@@ -142,7 +142,7 @@ function HS_setDate(inputObj){
 	calenderObj.style.position = "absolute";
 	calenderObj.targetObj = inputObj;
 	inputObj.parentNode.insertBefore(calenderObj,inputObj.nextSibling);
-}//»¶Ó­À´µ½Õ¾³¤ÌØĞ§Íø£¬ÎÒÃÇµÄÍøÖ·ÊÇwww.zzjs.net£¬ºÜºÃ¼Ç£¬zzÕ¾³¤£¬js¾ÍÊÇjsÌØĞ§£¬±¾Õ¾ÊÕ¼¯´óÁ¿¸ßÖÊÁ¿js´úÂë£¬»¹ÓĞĞí¶à¹ã¸æ´úÂëÏÂÔØ¡£
+}//æ¬¢è¿æ¥åˆ°ç«™é•¿ç‰¹æ•ˆç½‘ï¼Œæˆ‘ä»¬çš„ç½‘å€æ˜¯www.zzjs.netï¼Œå¾ˆå¥½è®°ï¼Œzzç«™é•¿ï¼Œjså°±æ˜¯jsç‰¹æ•ˆï¼Œæœ¬ç«™æ”¶é›†å¤§é‡é«˜è´¨é‡jsä»£ç ï¼Œè¿˜æœ‰è®¸å¤šå¹¿å‘Šä»£ç ä¸‹è½½ã€‚
   </script>
 <style>
   body {font-size:12px}

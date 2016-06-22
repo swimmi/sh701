@@ -15,9 +15,6 @@
 <body>
   <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
     <tr>
-      <td height="80" colspan="2">统计报表</td>
-    </tr>
-    <tr>
       <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
       <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">首页&gt; 统计报表</td>
     </tr>

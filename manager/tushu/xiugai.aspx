@@ -1,19 +1,19 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <!--#include file="../../conn.aspx"-->
 <%	 
-if request.form("submit")="È·ÈÏĞŞ¸Ä" then
+if request.form("submit")="ç¡®è®¤ä¿®æ”¹" then
 if Request("bianhao")="" then
-	response.Write "<script language=javascript>alert('ÇëÌîĞ´Í¼Êé±àºÅ£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·å¡«å†™å›¾ä¹¦ç¼–å·ï¼');history.go(-1);</script>"
 	response.end
 end if
 if Request("title")="" then
-	response.Write "<script language=javascript>alert('ÇëÌîĞ´Í¼ÊéÃû³Æ£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¯·å¡«å†™å›¾ä¹¦åç§°ï¼');history.go(-1);</script>"
 	response.end
 end if
 	set rs=server.CreateObject("adodb.recordset") 
@@ -27,7 +27,7 @@ end if
 	rs.close
 	set rs=nothing
 
-	response.Write "<script language=javascript>alert('³É¹¦·¢²¼£¡');location.href='read.aspx';</script>"
+	response.Write "<script language=javascript>alert('æˆåŠŸå‘å¸ƒï¼');location.href='read.aspx';</script>"
 	response.end
 
 end if
@@ -48,16 +48,13 @@ end if
    %>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">Í¼ÊéĞŞ¸Ä</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÏµÍ³ÉèÖÃ &gt; Í¼ÊéÓ¡Ë¢¹ÜÀí &gt; Í¼ÊéĞŞ¸Ä</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; ç³»ç»Ÿè®¾ç½® &gt; å›¾ä¹¦å°åˆ·ç®¡ç† &gt; å›¾ä¹¦ä¿®æ”¹</td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />Í¼ÊéĞŞ¸Ä</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />å›¾ä¹¦ä¿®æ”¹</td>
   </tr>
   <tr>
     <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px; padding-top:10px;">
@@ -68,24 +65,24 @@ end if
     <tr>
       <td align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td width="107" height="30" align="right" class="content">Í¼Êé±àºÅ£º</td>
+          <td width="107" height="30" align="right" class="content">å›¾ä¹¦ç¼–å·ï¼š</td>
           <td width="1069"  align="left"><input name="bianhao" type="text" id="bianhao" size="50" value="<%=bianhao%>" />
 		  <input name="id" type="hidden" id="id" size="50" value="<%=request("id")%>" />
             <span class="hong">            *</span></td>
         </tr>
         <tr>
-          <td height="30" align="right" class="content">Í¼ÊéÃû³Æ£º</td>
+          <td height="30" align="right" class="content">å›¾ä¹¦åç§°ï¼š</td>
           <td  align="left"><input name="title" type="text" id="title" size="50"  value="<%=title%>"/>
             <span class="hong">            *</span></td>
         </tr>
         <tr>
-          <td height="30" align="right" class="content">Í¼ÊéISBN£º</td>
+          <td height="30" align="right" class="content">å›¾ä¹¦ISBNï¼š</td>
           <td  align="left"><input name="isbn" type="text" id="isbn" size="50"  value="<%=isbn%>"/></td>
         </tr>
         <tr>
           <td height="30" align="right" class="content">&nbsp;</td>
-          <td height="40" align="left" valign="bottom"><input type="submit" name="Submit" value="È·ÈÏĞŞ¸Ä" />
-            <input type="button" name="Submit2" value="·µ»ØÉÏÒ»²ã"  onclick="javasprit:history.go(-1)" /></td>
+          <td height="40" align="left" valign="bottom"><input type="submit" name="Submit" value="ç¡®è®¤ä¿®æ”¹" />
+            <input type="button" name="Submit2" value="è¿”å›ä¸Šä¸€å±‚"  onclick="javasprit:history.go(-1)" /></td>
         </tr>
       </table>
         </td>

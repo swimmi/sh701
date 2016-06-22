@@ -1,8 +1,8 @@
- <!--#include file="../jiance.aspx"-->
+ï»¿ <!--#include file="../jiance.aspx"-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%=request.Cookies("bj")("webname")%></title>
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 </head>
@@ -13,7 +13,7 @@
  <%
 
 if isnumeric(Request("page"))=false then
-	response.Write "<script language=javascript>alert('ÊäÈë´íÎó£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¾“å…¥é”™è¯¯ï¼');history.go(-1);</script>"
 	response.end
 end if
 
@@ -32,7 +32,7 @@ rs.Open SQL,conn,1,1
 
 msg_per_page=10
 if (Request("page")-1)*msg_per_page-rs.recordcount>0 then
-	response.Write "<script language=javascript>alert('ÊäÈë´íÎó£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¾“å…¥é”™è¯¯ï¼');history.go(-1);</script>"
 	response.end
 end if
 %>
@@ -43,16 +43,16 @@ end if
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">Î´¿ªÍ¨´úÀí·þÎñ</td>
+    <td height="80" colspan="2">æœªå¼€é€šä»£ç†æœåŠ¡</td>
   </tr>
   <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ·þÎñ¹ÜÀí &gt; Î´¿ªÍ¨´úÀí·þÎñ</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; æœåŠ¡ç®¡ç† &gt; æœªå¼€é€šä»£ç†æœåŠ¡</td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />Î´¿ªÍ¨´úÀí·þÎñ</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />æœªå¼€é€šä»£ç†æœåŠ¡</td>
   </tr>
   <tr>
     <td  bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
@@ -62,13 +62,13 @@ end if
     <td><form id="form1" name="form1" method="post" action="?" style="margin:0px;">
       <table width="98%" height="40" border="0" align="left" cellspacing="0" class="content">
         <tr valign="top">
-          <td height="30" valign="middle">²éÑ¯£º °´
+          <td height="30" valign="middle">æŸ¥è¯¢ï¼š æŒ‰
             <select name="type" id="type">
-                  <option value="1">µÇÂ¼ÕÊºÅ</option>
-                  <option value="2">»áÔ±ÐÕÃû</option>
+                  <option value="1">ç™»å½•å¸å·</option>
+                  <option value="2">ä¼šå‘˜å§“å</option>
               </select>
                 <input name="search" type="text" id="search" size="20" />
-                <input name="Submit2" type="submit" id="Submit" value="²éÑ¯" />
+                <input name="Submit2" type="submit" id="Submit" value="æŸ¥è¯¢" />
           </td>
         </tr>
       </table>
@@ -77,10 +77,10 @@ end if
 </table>
 <table width="99%" border="0" align="center" cellpadding="1"  cellspacing="1" bgcolor="c1c1c1">
   <tr bgcolor="#e1e1e1" class="titlea1">
-    <td height="40" align="center">µÇÂ¼ÕÊºÅ</td>
-    <td height="40" align="center">ÐÕÃû</td>
-    <td height="40" align="center">ÉêÇëÊ±¼ä</td>
-    <td height="40" align="center">²Ù×÷</td>
+    <td height="40" align="center">ç™»å½•å¸å·</td>
+    <td height="40" align="center">å§“å</td>
+    <td height="40" align="center">ç”³è¯·æ—¶é—´</td>
+    <td height="40" align="center">æ“ä½œ</td>
   </tr>
   <%
 		  	dim i
@@ -92,7 +92,7 @@ end if
 	      <input name="huiyuan_id" type="hidden" id="id" value="<%=rs("huiyuan_id")%>" size="10" />		</td>
     <td  height="30" align="center" class="content"><%=rs("huiyuan_name")%></td>
     <td height="30" align="center" class="content"><%=rs("huiyuan_zm_sq_time")%></td>
-    <td height="30" align="center" class="content"><input type="submit" name="Submit3" value="È·ÈÏ" onClick="javascript:if(!confirm('\nÌØ±ðÌáÊ¾£¡£¿\n\nÇëÉ÷ÖØ½øÐÐ¸Ã²Ù×÷£¡'))  return  false; "/> <a href="del.aspx?id=<%=rs("huiyuan_id")%>" onClick="javascript:if(!confirm('\nÌØ±ðÌáÊ¾£¡£¿\n\nÇëÉ÷ÖØ½øÐÐ¸Ã²Ù×÷£¡'))  return  false; ">É¾³ý</a></td>
+    <td height="30" align="center" class="content"><input type="submit" name="Submit3" value="ç¡®è®¤" onClick="javascript:if(!confirm('\nç‰¹åˆ«æç¤ºï¼ï¼Ÿ\n\nè¯·æ…Žé‡è¿›è¡Œè¯¥æ“ä½œï¼'))  return  false; "/> <a href="del.aspx?id=<%=rs("huiyuan_id")%>" onClick="javascript:if(!confirm('\nç‰¹åˆ«æç¤ºï¼ï¼Ÿ\n\nè¯·æ…Žé‡è¿›è¡Œè¯¥æ“ä½œï¼'))  return  false; ">åˆ é™¤</a></td>
   </tr>
 </form>
 
@@ -112,14 +112,14 @@ end if
       <td height="5"></td>
     </tr>
     <tr>
-      <td height="25" align="center"><span class="STYLE4">¡¾ <%=listPages("?search_condition="&request("search_condition")&"&select="&request("select")&"")%>
+      <td height="25" align="center"><span class="STYLE4">ã€ <%=listPages("?search_condition="&request("search_condition")&"&select="&request("select")&"")%>
             <input name="page" type="text" size="5" />
             <input name="select" type="hidden" id="select" value="<%=request("select")%>" size="5" />
             <input name="search_condition" type="hidden" id="search_condition" value="<%=request("search_condition")%>" size="5" />
             <input name="qishu_date1" type="hidden" id="qishu_date1" value="<%=request("qishu_date1")%>" size="5" />
             <input name="qishu_date2" type="hidden" id="qishu_date2" value="<%=request("qishu_date2")%>" size="5" />
-            <input type="submit" name="Submit" value="×ª" style=" border:1px solid #999999; "/>
-      ¡¿ </td>
+            <input type="submit" name="Submit" value="è½¬" style=" border:1px solid #999999; "/>
+      ã€‘ </td>
     </tr>
   </table>
 </form>

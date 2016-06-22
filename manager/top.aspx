@@ -77,7 +77,7 @@
 <table width="100%" height="42" border="0" cellpadding="0" cellspacing="0" style="position:fixed; top:0px;">
 	<tr>
 		<td bgcolor="#0897D1" width="300px;" align="center">
-			<font style="font-family:'幼圆'; font-size:25px; font-weight:bold; color:#FFFFFF">育儿周周记后台管理系统</font>
+			<font style="margin-left: 24px; font-family:'微软雅黑'; font-size:22px; font-weight:bold; color:#FFFFFF">育儿周周记后台管理系统</font>
 		</td>
 		<td align="left" bgcolor="#0897D1">
 

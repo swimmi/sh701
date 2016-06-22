@@ -1,8 +1,8 @@
- <!--#include file="../jiance.aspx"-->
+ï»¿ <!--#include file="../jiance.aspx"-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 <title><%=request.Cookies("bj")("webname")%></title>
 </head>
@@ -14,7 +14,7 @@
 	if request("action")="add" then
 	
 		if request("guanjian")="" then
-			response.Write "<script language=javascript>alert('ÇëÌîĞ´¹Ø¼ü×Ö£¡');location.href='class3.aspx';</script>"
+			response.Write "<script language=javascript>alert('è¯·å¡«å†™å…³é”®å­—ï¼');location.href='class3.aspx';</script>"
 			response.end
 		end if
 	
@@ -27,18 +27,18 @@
 		rs.close
 		set rs=nothing	
 		
-		response.Write "<script language=javascript>alert('Ìí¼Ó³É¹¦£¡');location.href='class13.aspx';</script>"
+		response.Write "<script language=javascript>alert('æ·»åŠ æˆåŠŸï¼');location.href='class13.aspx';</script>"
 		response.end
 	
 	end if	  
 %>
 <%
 
-	if request("Submit")="ĞŞ¸Ä" then
+	if request("Submit")="ä¿®æ”¹" then
 	
 		conn.execute("update guanjian set guanjian='"&request("guanjian")&"' where id='"&request("id")&"'")
 	
-		response.Write "<script language=javascript>alert('²Ù×÷³É¹¦£¡');location.href='class13.aspx';</script>"
+		response.Write "<script language=javascript>alert('æ“ä½œæˆåŠŸï¼');location.href='class13.aspx';</script>"
 		response.end
 
 	end if
@@ -47,7 +47,7 @@
 	
 		conn.execute("delete guanjian where id='"&request("id")&"'")
 	
-		response.Write "<script language=javascript>alert('²Ù×÷³É¹¦£¡');location.href='class13.aspx';</script>"
+		response.Write "<script language=javascript>alert('æ“ä½œæˆåŠŸï¼');location.href='class13.aspx';</script>"
 		response.end
 
 	end if
@@ -63,24 +63,21 @@ rs.Open SQL,conn,1,1
 %>
   <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
     <tr>
-      <td height="80" colspan="2">²ÎÊıÉèÖÃ</td>
-    </tr>
-    <tr>
       <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-      <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; ÏµÍ³ÉèÖÃ &gt; ²ÎÊıÉèÖÃ</td>
+      <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; ç³»ç»Ÿè®¾ç½® &gt; å‚æ•°è®¾ç½®</td>
     </tr>
   </table>
   <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
     <tr class="biao">
-      <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />²ÎÊıÉèÖÃ</td>
+      <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />å‚æ•°è®¾ç½®</td>
     </tr>
     <tr>
       <td align="center" bgcolor="#FFFFFF"><table width="99%" border="0" align="center" cellpadding="0" cellspacing="0" class="content">
         <tr>
-          <td width="100" height="40" align="left" ><input type="submit" name="Submit" value="ĞŞ¸ÄÖÜÁä" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'Î¢ÈíÑÅºÚ';" onClick="javascript:location.href='class11.aspx'"  /></td>
-          <td width="110" height="40" align="left" ><input type="submit" name="Submit" value="ĞŞ¸ÄÔÂÁä¶Î" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'Î¢ÈíÑÅºÚ';" onClick="javascript:location.href='class12.aspx'" /></td>
-          <td width="110" height="40" align="left" ><input type="submit" name="Submit" value="ĞŞ¸Ä¹Ø¼ü×Ö" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'Î¢ÈíÑÅºÚ';" onClick="javascript:location.href='class13.aspx'" disabled/></td>
-          <td width="110" height="40" align="left" ><input type="submit" name="Submit" value="ĞŞ¸ÄÀà±ğ" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'Î¢ÈíÑÅºÚ';" onClick="javascript:location.href='class14.aspx'" /></td>
+          <td width="100" height="40" align="left" ><input type="submit" name="Submit" value="ä¿®æ”¹å‘¨é¾„" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'å¾®è½¯é›…é»‘';" onClick="javascript:location.href='class11.aspx'"  /></td>
+          <td width="110" height="40" align="left" ><input type="submit" name="Submit" value="ä¿®æ”¹æœˆé¾„æ®µ" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'å¾®è½¯é›…é»‘';" onClick="javascript:location.href='class12.aspx'" /></td>
+          <td width="110" height="40" align="left" ><input type="submit" name="Submit" value="ä¿®æ”¹å…³é”®å­—" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'å¾®è½¯é›…é»‘';" onClick="javascript:location.href='class13.aspx'" disabled/></td>
+          <td width="110" height="40" align="left" ><input type="submit" name="Submit" value="ä¿®æ”¹ç±»åˆ«" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'å¾®è½¯é›…é»‘';" onClick="javascript:location.href='class14.aspx'" /></td>
           <td height="40" align="right" >&nbsp;</td>
         </tr>
       </table>
@@ -88,21 +85,21 @@ rs.Open SQL,conn,1,1
 	  <form id="form1" name="form1" method="post" action="?">
         <table width="99%" border="0" cellpadding="0" cellspacing="0" style="border:1px #CCCCCC solid">
           <tr align="left">
-            <td width="100" height="30">&nbsp;&nbsp;&nbsp;&nbsp;¹Ø¼ü×Ö£º</td>
+            <td width="100" height="30">&nbsp;&nbsp;&nbsp;&nbsp;å…³é”®å­—ï¼š</td>
             <td height="30">
 				<input name="guanjian" type="text" id="guanjian" />
 				<input name="action" type="hidden" id="action" value="add" />			</td>
           </tr>
           <tr>
             <td width="100" height="30" align="right">&nbsp;</td>
-            <td height="30" align="left"><input type="submit" name="Submit" value="Ìá½»" /></td>
+            <td height="30" align="left"><input type="submit" name="Submit" value="æäº¤" /></td>
           </tr>
         </table>
       </form>
 	  <hr color="#FF9900" />
         <table width="99%" border="0" align="center" cellpadding="1"  cellspacing="1" bgcolor="c1c1c1">
         <tr bgcolor="#e1e1e1" class="titlea1">
-          <td width="50%" height="40" align="center" >¹Ø¼ü×Ö</td>
+          <td width="50%" height="40" align="center" >å…³é”®å­—</td>
           </tr>
 <%
 if not rs.eof and not rs.bof then
@@ -113,10 +110,10 @@ do while not rs.eof
 <form id="form1" name="form1" method="post" action="?">
   <table border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td><input type="text" name="guanjian" value="<%=rs("guanjian")%>" style="width:250px; height:20px; line-height:20px; font-family:'Î¢ÈíÑÅºÚ'" />
-        <input type="hidden" name="id" value="<%=rs("id")%>" style="width:250px; height:20px; line-height:20px; font-family:'Î¢ÈíÑÅºÚ'" /></td>
-      <td width="50" align="right"><input type="submit" name="Submit" value="ĞŞ¸Ä" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'Î¢ÈíÑÅºÚ';" /></td>
-      <td width="50" align="right"><a href="?id=<%=rs("id")%>&action=del" onClick="javascript:if(!confirm('\nÌØ±ğÌáÊ¾£¡£¿\n\nÇëÉ÷ÖØ½øĞĞ¸Ã²Ù×÷£¡\nÉ¾³ıºó½«ÎŞ·¨½øĞĞ»Ö¸´¡£'))  return  false; "><img src="../images/19.jpg" width="44" height="24" border="0"/></a></td>
+      <td><input type="text" name="guanjian" value="<%=rs("guanjian")%>" style="width:250px; height:20px; line-height:20px; font-family:'å¾®è½¯é›…é»‘'" />
+        <input type="hidden" name="id" value="<%=rs("id")%>" style="width:250px; height:20px; line-height:20px; font-family:'å¾®è½¯é›…é»‘'" /></td>
+      <td width="50" align="right"><input type="submit" name="Submit" value="ä¿®æ”¹" style="border:1px #CCCCCC solid; background-color:#FFFFFF; line-height:20px; font-family:'å¾®è½¯é›…é»‘';" /></td>
+      <td width="50" align="right"><a href="?id=<%=rs("id")%>&action=del" onClick="javascript:if(!confirm('\nç‰¹åˆ«æç¤ºï¼ï¼Ÿ\n\nè¯·æ…é‡è¿›è¡Œè¯¥æ“ä½œï¼\nåˆ é™¤åå°†æ— æ³•è¿›è¡Œæ¢å¤ã€‚'))  return  false; "><img src="../images/19.jpg" width="44" height="24" border="0"/></a></td>
     </tr>
   </table>
 </form>            
