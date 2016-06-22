@@ -1,0 +1,63 @@
+﻿/* CSS Document */
+
+body{ padding:0; margin:0;  font-size:12px; font-family:Helvetica; }
+
+input{ 
+}
+input {border-radius:0px;  -webkit-border-radius: 0px; border:0px #52A714 solid;font-size:15px; color:#52A714;font-family:'微软雅黑';/*去除input默认样式*/}
+
+.title{
+font-size:30px;
+color:#6E5F5E;
+font-family:"宋体";
+}
+.titlea{
+font-size:14px;
+color:#333333;
+letter-spacing:1px;
+}
+.titlea1{
+font-size:14px;
+color:#333333;
+letter-spacing:1px;
+font-weight:bold;
+}
+.biao{
+font-size:14px;
+color:#ffffff;
+font-weight:bold;
+}
+
+.content{
+font-size:13px;
+color:#000000;
+}
+a:link {
+	text-decoration: none;
+	color: #3399FF;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+a:active {
+	text-decoration: none;
+}
+.bon{
+font-size:12px;
+color:#666666;
+}
+
+.tian{
+font-size:16px;}
+
+.tikuan{
+font-size:15px;}
+
+.hong{
+color:#FF0000
+}

@@ -1,0 +1,3 @@
+﻿<%
+	response.Redirect "index.aspx"
+%>
