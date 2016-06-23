@@ -1,9 +1,9 @@
-<!--#include file="../../../conn.aspx"-->
+ï»¿<!--#include file="../../../conn.aspx"-->
 
 
 <%
 		if 	request("video")="" then
-			Response.Write "<script language=javascript>alert('ÇëÉÏ´«ÊÓÆµ×ÊÔ´£¡');history.go(-1);</script>"
+			Response.Write "<script language=javascript>alert('è¯·ä¸Šä¼ è§†é¢‘èµ„æºï¼');history.go(-1);</script>"
 			Response.End 
 		end if
 		
@@ -17,7 +17,7 @@
 		set rs=nothing
 		
 		Response.Cookies("biaoji")=""
-		Response.Write "<script language=javascript>alert('²Ù×÷³É¹¦£¡');location.href='index.aspx';</script>"
+		Response.Write "<script language=javascript>alert('æ“ä½œæˆåŠŸï¼');location.href='index.aspx';</script>"
 		Response.End 
 
 	%>

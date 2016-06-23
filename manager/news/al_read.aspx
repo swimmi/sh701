@@ -11,9 +11,6 @@
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">最新资讯</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
     <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">首页 &gt; 新闻资讯 &gt; 最新资讯</td>
   </tr>
@@ -23,7 +20,7 @@
     <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />最新资讯</td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px; padding-top:10px;">
+    <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px;">
 	
 <%
 
@@ -64,7 +61,7 @@ end if
 
 <!--#include file="../../inc/headpage.aspx"-->
 <!--#include file="../../inc/safe.aspx"--> 
-               <table width="99%" height="60" border="0" align="center" cellspacing="0" class="content">
+               <table width="99%" height="40" border="0" align="center" cellspacing="0" class="content">
                  
                  <tr valign="top">
                    <form id="form2" name="form2" method="post" action="?">

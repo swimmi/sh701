@@ -24,7 +24,7 @@
       <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />观看统计</td>
     </tr>
     <tr>
-      <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
+      <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px;">
         <table width="100%" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td height="370" valign="top">

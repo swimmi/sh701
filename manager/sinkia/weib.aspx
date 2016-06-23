@@ -1,16 +1,16 @@
-<!--#include file="../../conn.aspx"-->
+ï»¿<!--#include file="../../conn.aspx"-->
 <%
 
 
 
 			
 	if request("banci")="" then
-		response.Write "<script language=javascript>alert('ÇëÑ¡Ôñ°æ´Î£¡');history.go(-1);</script>"
+		response.Write "<script language=javascript>alert('è¯·é€‰æ‹©ç‰ˆæ¬¡ï¼');history.go(-1);</script>"
 		response.end
 	end if
 	
 	if request("yingci")="" then
-		response.Write "<script language=javascript>alert('ÇëÑ¡ÔñÓ¡´Î£¡');history.go(-1);</script>"
+		response.Write "<script language=javascript>alert('è¯·é€‰æ‹©å°æ¬¡ï¼');history.go(-1);</script>"
 		response.end
 	end if
 	
@@ -39,7 +39,7 @@
 	
 	
 	else
-		response.Write "<script language=javascript>alert('¶Ô²»Æğ£¬ÇëÏÈÉú³É¼¤»îÂë£¡');history.go(-1);</script>"
+		response.Write "<script language=javascript>alert('å¯¹ä¸èµ·ï¼Œè¯·å…ˆç”Ÿæˆæ¿€æ´»ç ï¼');history.go(-1);</script>"
 		response.end
 	end if
 	rs.close
@@ -49,7 +49,7 @@
 
 
 
-	response.Write "<script language=javascript>alert('²Ù×÷³É¹¦£¡');location.href='wei.aspx?id="&request("id")&"&tushu="&request("tushu")&"&banci="&request("banci")&"&yingci="&request("yingci")&"';</script>"
+	response.Write "<script language=javascript>alert('æ“ä½œæˆåŠŸï¼');location.href='wei.aspx?id="&request("id")&"&tushu="&request("tushu")&"&banci="&request("banci")&"&yingci="&request("yingci")&"';</script>"
 	response.end
 
 

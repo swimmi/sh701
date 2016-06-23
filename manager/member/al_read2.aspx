@@ -1,8 +1,8 @@
- <!--#include file="../jiance.aspx"-->
+ï»¿ <!--#include file="../jiance.aspx"-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 <title><%=request.Cookies("bj")("webname")%></title>
 </head>
@@ -18,7 +18,7 @@ end if
 <%
 
 if isnumeric(Request("page"))=false then
-	response.Write "<script language=javascript>alert('ÊäÈë´íÎó£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¾“å…¥é”™è¯¯ï¼');history.go(-1);</script>"
 	response.end
 end if
 
@@ -62,7 +62,7 @@ end if
 SQL="select * from huiyuan where 1=1 "&search_sql&"   and addtime between '"&session("date1")&"' and '"&session("date2")&"' order by addtime desc"
 
 if request("jihuoma")<>"" then
-SQL="select * from View_huiyuanjihuoma where jihuoma='"&request("jihuoma")&"'"
+SQL="select * from huiyuan_jihuoma where jihuoma='"&request("jihuoma")&"'"
 end if
 
 set rs=server.CreateObject("adodb.recordset")
@@ -72,7 +72,7 @@ rs.Open SQL,conn,1,1
 
 msg_per_page=20
 if (Request("page")-1)*msg_per_page-rs.recordcount>0 then
-	response.Write "<script language=javascript>alert('ÊäÈë´íÎó£¡');history.go(-1);</script>"
+	response.Write "<script language=javascript>alert('è¾“å…¥é”™è¯¯ï¼');history.go(-1);</script>"
 	response.end
 end if
 %>
@@ -80,16 +80,13 @@ end if
         <!--#include file="../../inc/safe.aspx"-->
   <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
     <tr>
-      <td height="80" colspan="2">ÓÃ»§ÁĞ±í</td>
-    </tr>
-    <tr>
       <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-      <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; »áÔ±¹ÜÀí &gt; ÓÃ»§ÁĞ±í</td>
+      <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; ä¼šå‘˜ç®¡ç† &gt; ç”¨æˆ·åˆ—è¡¨</td>
     </tr>
   </table>
   <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
     <tr class="biao">
-      <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />ÓÃ»§ÁĞ±í</td>
+      <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />ç”¨æˆ·åˆ—è¡¨</td>
     </tr>
     <tr>
       <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
@@ -102,37 +99,37 @@ end if
                 <tr valign="top">
                   <td height="30" align="left" valign="middle">
 				  <form id="form1" name="form1" method="post" action="?" style="margin:0px;">
-				  ²éÑ¯£º °´
+				  æŸ¥è¯¢ï¼š æŒ‰
                     <select name="type" id="type">
-                      <option value="1">ÊÖ»úºÅ</option>
+                      <option value="1">æ‰‹æœºå·</option>
                     </select>
                     <input name="search" type="text" id="search" size="20" />
                     <select name="select" id="select">
-                      <option value="0">ËùÓĞĞÔ±ğ</option>
-                      <option value="1">ÄĞ±¦±¦</option>
-                      <option value="2">Å®±¦±¦</option>
+                      <option value="0">æ‰€æœ‰æ€§åˆ«</option>
+                      <option value="1">ç”·å®å®</option>
+                      <option value="2">å¥³å®å®</option>
                     </select>
                     <select name="select1" id="select1">
-                      <option value="0">ËùÓĞ×´Ì¬</option>
-                      <option value="1">Õı³£</option>
-                      <option value="2">Ê§Ğ§</option>
+                      <option value="0">æ‰€æœ‰çŠ¶æ€</option>
+                      <option value="1">æ­£å¸¸</option>
+                      <option value="2">å¤±æ•ˆ</option>
                     </select>
-                    Ê±¼ä £º
+                    æ—¶é—´ ï¼š
                     <input name="shijian1" type="text" style="width:100px" onFocus="HS_setDate(this)" value="<%=session("date1")%>" />
                     -
                     <input name="shijian2" type="text" style="width:100px" onFocus="HS_setDate(this)" value="<%=session("date2")%>" />
-                    <input name="Submit2" type="submit" id="Submit" value="²éÑ¯" />
+                    <input name="Submit2" type="submit" id="Submit" value="æŸ¥è¯¢" />
 					</form>					</td>
-                  <td align="left" valign="middle"><input name="Submit22" type="submit" id="Submit2" value="µ¼³öÁĞ±í" onClick="javascript:location.href='al_read2_out.aspx?type=<%=request("type")%>&search=<%=request("search")%>&select=<%=request("select")%>&select1=<%=request("select1")%>&shijian1=<%=session("date1")%>&shijian2=<%=session("date2")%>'" /></td>
+                  <td align="left" valign="middle"><input name="Submit22" type="submit" id="Submit2" value="å¯¼å‡ºåˆ—è¡¨" onClick="javascript:location.href='al_read2_out.aspx?type=<%=request("type")%>&search=<%=request("search")%>&select=<%=request("select")%>&select1=<%=request("select1")%>&shijian1=<%=session("date1")%>&shijian2=<%=session("date2")%>'" /></td>
                 </tr>
 				                <tr valign="top">
                   <td height="30" align="left" valign="middle">
                     <form id="form3" name="form3" method="post" action="">
                       
-                      ¼¤»îÂë²éÑ¯:  <input name="jihuoma" type="text" id="jihuoma" />
+                      æ¿€æ´»ç æŸ¥è¯¢:  <input name="jihuoma" type="text" id="jihuoma" />
 
                       <span style="margin:0px;">
-                      <input name="Submit23" type="submit" id="Submit22" value="²éÑ¯" />
+                      <input name="Submit23" type="submit" id="Submit22" value="æŸ¥è¯¢" />
                       </span>
                     </form>
                     </td>
@@ -144,11 +141,11 @@ end if
         </table>
         <table width="99%" border="0" align="center" cellpadding="1"  cellspacing="1" bgcolor="c1c1c1">
         <tr bgcolor="#e1e1e1" class="titlea1">
-          <td align="center" >ÊÖ»úºÅ</td>
-          <td align="center" >ĞÔ±ğ</td>
-          <td height="40" align="center" >×¢²áÊ±¼ä</td>
-          <td height="40" align="center" >Ê¹ÓÃ×´Ì¬</td>
-          <td height="40" align="center">²Ù×÷</td>
+          <td align="center" >æ‰‹æœºå·</td>
+          <td align="center" >æ€§åˆ«</td>
+          <td height="40" align="center" >æ³¨å†Œæ—¶é—´</td>
+          <td height="40" align="center" >ä½¿ç”¨çŠ¶æ€</td>
+          <td height="40" align="center">æ“ä½œ</td>
         </tr>
           <%
 		  	dim i
@@ -157,14 +154,14 @@ end if
 %>
           <tr bgcolor="FFFFFF" onMouseOver="this.style.backgroundColor='#F1F1F1'"  onmouseout="this.style.backgroundColor=''">
             <td align="center" class="content"  ><%=rs("tel")%></td>
-            <td align="center" class="content"><%if rs("sex")=1 then%>ÄĞ±¦±¦<%end if%><%if rs("sex")=2 then%>Å®±¦±¦<%end if%></td>
+            <td align="center" class="content"><%if rs("sex")=1 then%>ç”·å®å®<%end if%><%if rs("sex")=2 then%>å¥³å®å®<%end if%></td>
             <td height="30" align="center" class="content"><%=rs("addtime")%></td>
           <td height="30" align="center" class="content"><%if rs("flag")=0 then%>
-            <a href="dj.aspx?flag=0&amp;id=<%=rs("id")%>">Õı³£</a>
+            <a href="dj.aspx?flag=0&amp;id=<%=rs("id")%>">æ­£å¸¸</a>
             <%else%>
-            <a href="dj.aspx?flag=1&amp;id=<%=rs("id")%>"><font color="#FF0000">Ê§Ğ§</font></a>
+            <a href="dj.aspx?flag=1&amp;id=<%=rs("id")%>"><font color="#FF0000">å¤±æ•ˆ</font></a>
           <%end if%></td>
-          <td height="30" align="center" class="content"><a href="?action=del&amp;huiyuan_id=<%=rs("id")%>">É¾³ı</a>&nbsp;<a href="al_info.aspx?huiyuan_id=<%=rs("id")%>">ĞŞ¸Ä</a>&nbsp;<a href="jihuoma.aspx?huiyuan_id=<%=rs("id")%>">²é¿´¼¤»îÂë</a></td>
+          <td height="30" align="center" class="content"><a href="?action=del&amp;huiyuan_id=<%=rs("id")%>">åˆ é™¤</a>&nbsp;<a href="al_info.aspx?huiyuan_id=<%=rs("id")%>">ä¿®æ”¹</a>&nbsp;<a href="jihuoma.aspx?huiyuan_id=<%=rs("id")%>">æŸ¥çœ‹æ¿€æ´»ç </a></td>
         </tr>
           <%
 			  i=i+1
@@ -182,7 +179,7 @@ end if
               <td height="5"></td>
             </tr>
             <tr>
-              <td height="5" align="center"> ¡¾ <%=listPages("?kind="&request("kind")&"&type="&request("type")&"&select1="&request("select1")&"&search="&request("search")&"&shijian1="&request("shijian1")&"&shijian2="&request("shijian2")&"")%>
+              <td height="5" align="center"> ã€ <%=listPages("?kind="&request("kind")&"&type="&request("type")&"&select1="&request("select1")&"&search="&request("search")&"&shijian1="&request("shijian1")&"&shijian2="&request("shijian2")&"")%>
                 <input name="page" type="text" size="5" />
                 <input name="kink" type="hidden" id="kink" value="<%=request("kink")%>" size="5" />
                 <input name="type" type="hidden" id="type" value="<%=request("type")%>" size="5" />
@@ -190,8 +187,8 @@ end if
                 <input name="search" type="hidden" id="search" value="<%=request("search")%>" size="5" />
                 <input name="shijian1" type="hidden" id="shijian1" value="<%=request("shijian1")%>" size="5" />
                 <input name="shijian2" type="hidden" id="shijian2" value="<%=request("shijian2")%>" size="5" />
-                <input type="submit" name="Submit" value="×ª" style=" border:1px solid #999999; "/>
-                ¡¿ </td>
+                <input type="submit" name="Submit" value="è½¬" style=" border:1px solid #999999; "/>
+                ã€‘ </td>
             </tr>
           </table>
         </form>

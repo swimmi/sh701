@@ -1,6 +1,6 @@
-<!--#include file="../../conn.aspx"--> 
+ï»¿<!--#include file="../../conn.aspx"--> 
 <%response.ContentType ="application/vnd.ms-excel"%>
-<%Response.AddHeader "Content-Disposition", "attachment; filename=µ¼³ö¶þÎ¬ÂëÁÐ±í.xls"%>
+<%Response.AddHeader "Content-Disposition", "attachment; filename=å¯¼å‡ºäºŒç»´ç åˆ—è¡¨.xls"%>
 <%
 	SQL="select * from weixing where tushuid='"&request("tushu")&"' and banci='"&request("banci")&"'and yingci='"&request("yingci")&"'"
 	set rs=server.CreateObject("adodb.recordset")
@@ -9,12 +9,12 @@
 
 <table width="100%" border="0" align="center">
                <tr>
-                 <td height="30" align="center">ÊÓÆµ±àºÅ</td>
-                 <td height="30" align="center">ÊÓÆµÃû³Æ</td>
-                 <td height="30" align="center">Í¼ÊéÃû³Æ</td>
-                 <td height="30" align="center">Í¼ÊéÐòÁÐºÅ</td>
-                 <td align="center">¼¤»îÂë</td>
-                 <td align="center">¶þÎ¬ÂëÊÓÆµÁ´½Ó</td>
+                 <td height="30" align="center">è§†é¢‘ç¼–å·</td>
+                 <td height="30" align="center">è§†é¢‘åç§°</td>
+                 <td height="30" align="center">å›¾ä¹¦åç§°</td>
+                 <td height="30" align="center">å›¾ä¹¦åºåˆ—å·</td>
+                 <td align="center">æ¿€æ´»ç </td>
+                 <td align="center">äºŒç»´ç è§†é¢‘é“¾æŽ¥</td>
                </tr>
 <%do while not rs.eof%>
                <tr>
@@ -23,7 +23,7 @@
                  <td align="center" class="content"><%=rs("tushutitle")%></td>
                  <td align="center" class="content"><%=rs("xuliehao")%></td>
                  <td align="center" class="content"><%=rs("jihuoma")%></td>
-                 <td align="center" class="content">http://192.168.1.88:8701/video.aspx?videobianhao=<%=rs("videobianhao")%>&amp;jihuoma=<%=rs("jihuoma")%></td>
+                 <td align="center" class="content">http://192.168.1.134/video.aspx?bh=<%=rs("videobianhao")%>&amp;jhm=<%=rs("jihuoma")%></td>
                </tr>
 <%
 	rs.movenext

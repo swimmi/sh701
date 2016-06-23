@@ -12,9 +12,6 @@
 <body>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">二维码管理</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
     <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">首页 &gt; 视频管理 &gt; 二维码管理</td>
   </tr>
@@ -24,7 +21,7 @@
     <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />二维码管理</td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
+    <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px;">
 
 
 
@@ -36,7 +33,7 @@
 		<form id="form1" name="form1" method="post" action="weib.aspx">
 			<table width="99%" border="0" cellpadding="0" cellspacing="0">
 				<tr>
-					<td width="80" align="right" style="font-size:12px;">生成二维码：</td>
+					<td width="80" height="40" align="right" style="font-size:12px;">生成二维码：</td>
 					<td align="left" width="200">
 					
 <%
@@ -106,7 +103,6 @@
         </tr>
 			</table>
     </form>
-	<Br />
 <table width="99%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="999999">
     <tr bgcolor="#E3E3E3">
       <td height="30" align="center">视频编号</td>
@@ -124,7 +120,7 @@
       <td align="center" class="content"><%=rs("tushutitle")%></td>
       <td align="center" class="content"><%=rs("xuliehao")%></td>
       <td align="center" class="content"><%=rs("jihuoma")%></td>
-      <td align="center" class="content">http://yezzj.91gaocai.com//video.aspx?bh=<%=rs("videobianhao")%>&jhm=<%=rs("jihuoma")%></td>
+      <td align="center" class="content">http://192.168.1.134/video.aspx?bh=<%=rs("videobianhao")%>&jhm=<%=rs("jihuoma")%></td>
       <td align="center" class="content"><a href="weilook.aspx?id=<%=rs("id")%>">预览二维码</a></td>
     </tr>
 <%

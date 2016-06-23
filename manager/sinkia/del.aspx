@@ -1,9 +1,9 @@
-<!--#include file="../../conn.aspx"-->
+ï»¿<!--#include file="../../conn.aspx"-->
 <%
 
 	conn.execute("delete video where id='"&request("id")&"'")
 
-	response.Write "<script language=javascript>alert('É¾³ı³É¹¦£¡');location.href='product.aspx';</script>"
+	response.Write "<script language=javascript>alert('åˆ é™¤æˆåŠŸï¼');location.href='product.aspx';</script>"
 	response.end
 	
 %>

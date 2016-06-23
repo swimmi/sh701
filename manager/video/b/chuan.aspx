@@ -1,36 +1,36 @@
-<!--#include file="../../../conn.aspx"-->
+ï»¿<!--#include file="../../../conn.aspx"-->
 
 
 <%
 		
 		if 	request("bianhao")="" then
-			Response.Write "<script language=javascript>alert('ÇëÌîĞ´ÊÓÆµ±àºÅ£¡');history.go(-1);</script>"
+			Response.Write "<script language=javascript>alert('è¯·å¡«å†™è§†é¢‘ç¼–å·ï¼');history.go(-1);</script>"
 			Response.End 
 		end if
 		
 		if 	request("title")="" then
-			Response.Write "<script language=javascript>alert('ÇëÌîĞ´ÊÓÆµÃû³Æ£¡');history.go(-1);</script>"
+			Response.Write "<script language=javascript>alert('è¯·å¡«å†™è§†é¢‘åç§°ï¼');history.go(-1);</script>"
 			Response.End 
 		end if
 		
 		if 	request("shichang")="" then
-			Response.Write "<script language=javascript>alert('ÇëÌîĞ´ÊÓÆµÊ±³¤£¡');history.go(-1);</script>"
+			Response.Write "<script language=javascript>alert('è¯·å¡«å†™è§†é¢‘æ—¶é•¿ï¼');history.go(-1);</script>"
 			Response.End 
 		end if
 		if 	request("tushu")="" then
-			Response.Write "<script language=javascript>alert('ÇëÑ¡ÔñÍ¼Êé£¡');history.go(-1);</script>"
+			Response.Write "<script language=javascript>alert('è¯·é€‰æ‹©å›¾ä¹¦ï¼');history.go(-1);</script>"
 			Response.End 
 		end if
 		
 		if 	request("tushu")=0 then
-			Response.Write "<script language=javascript>alert('ÇëÑ¡ÔñÍ¼Êé£¡');history.go(-1);</script>"
+			Response.Write "<script language=javascript>alert('è¯·é€‰æ‹©å›¾ä¹¦ï¼');history.go(-1);</script>"
 			Response.End 
 		end if
 		
 		set Rs=server.createobject("adodb.recordset")	
 		Rs.Open ("select * from video where bianhao='"&request("bianhao")&"'" ),Conn,1,1
 		if rs.recordcount >0 then
-		Response.Write "<script language=javascript>alert('ÊÓÆµ±àºÅÒÑ´æÔÚ£¡');history.go(-1);</script>"
+		Response.Write "<script language=javascript>alert('è§†é¢‘ç¼–å·å·²å­˜åœ¨ï¼');history.go(-1);</script>"
 		response.end
 		end if
 		rs.close
@@ -59,7 +59,7 @@
 		set rs=nothing
 		
 		
-		Response.Write "<script language=javascript>alert('ÏÂÒ»²½£¬ÇëÉÏ´«ÊÓÆµ×ÊÔ´£¡');location.href='indexa.aspx';</script>"
+		Response.Write "<script language=javascript>alert('ä¸‹ä¸€æ­¥ï¼Œè¯·ä¸Šä¼ è§†é¢‘èµ„æºï¼');location.href='indexa.aspx';</script>"
 		Response.End 
 
 	%>

@@ -23,8 +23,6 @@ ConnStr = " Password = "&SqlPassword&"; user id =" & SqlUsername&"; Initial Cata
 Set conn = Server.CreateObject("ADODB.Connection") 
 conn.open ConnStr 
 
-
-
 if request.Cookies("bj")("orders")="" then
 	dingdan_=now()
 	dingdan_=replace(trim(dingdan_),"-","")
@@ -34,18 +32,14 @@ if request.Cookies("bj")("orders")="" then
 	response.Cookies("bj")("orders")=dingdan_
 end if
 
-		if request.Cookies("bj")("huiyuan_id")&""<>"" then
-						set rsa=server.CreateObject("adodb.recordset")
-						rsa.open "select * from tbl_sinkia_action where isok=0 and username='"&request.Cookies("bj")("orders")&"' and orders ='"&request.Cookies("bj")("orders")&"'",conn,1,3
-						while not rsa.eof
-						rsa("username")=request.Cookies("bj")("huiyuan_id")
-						rsa.MoveNext
-						wend
-						rsa.close
-						set rsa=nothing
-	end if
-
-
-
-
+if request.Cookies("bj")("huiyuan_id")&""<>"" then
+	set rsa=server.CreateObject("adodb.recordset")
+	rsa.open "select * from tbl_sinkia_action where isok=0 and username='"&request.Cookies("bj")("orders")&"' and orders ='"&request.Cookies("bj")("orders")&"'",conn,1,3
+	while not rsa.eof
+	rsa("username")=request.Cookies("bj")("huiyuan_id")
+	rsa.MoveNext
+	wend
+	rsa.close
+	set rsa=nothing
+end if
 %>

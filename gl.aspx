@@ -78,14 +78,13 @@
       line-height: 28px;
       background: url(image/in_bg3.gif) no-repeat;
       padding-left: 38px;
-      padding: 2px 0 0 5px;
+      padding: 2px 0 0 38px;
       margin-top: 3px;
       margin-right: 40px;
       margin-bottom: 10px;
       color: #9D7922;
       font-size: 15px;
       font-weight: bold;
-      text-align: center;
       border: 0px;
       outline: none;
     }

@@ -10,9 +10,6 @@
 <body>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">二维码管理</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
     <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">首页 &gt; 视频管理 &gt; 二维码管理</td>
   </tr>
@@ -22,7 +19,7 @@
     <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />二维码管理</td>
   </tr>
   <tr>
-    <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
+    <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px;">
 
 
 
@@ -51,7 +48,7 @@
 	 
 	 
 	 
-<input id="text" type="text" value="http://<%=Request.ServerVariables("SERVER_ADDR")%>:<%=Request.ServerVariables("SERVER_PORT")%>/video.aspx?videobianhao=<%=videobianhao%>&jihuoma=<%=jihuoma%>" style="width:100%;display:none" />
+<input id="text" type="text" value="http://192.168.1.134/video.aspx?bh=<%=videobianhao%>&jhm=<%=jihuoma%>" style="width:100%;display:none" />
 <div id="qrcode" style="width:250px; height:250px;" ></div>
 <script src='js/jquery-c152c51c4dda93382a3ae51e8a5ea45d.js'></script>
 <script src='js/qrcode.min.js'></script>
