@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ï»¿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><%=request.Cookies("bj")("webname")%></title>
 <link href="../../css/cssa.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
@@ -15,9 +15,9 @@
 <!--#include file="../../time/time.aspx"--> 
 
 <%	 
-	if request("Submit")="ĞŞ¸Ä" then
+	if request("Submit")="ä¿®æ”¹" then
 		conn.execute("update  huiyuan set tel='"&request("tel")&"',sex="&request("sex")&"  where id="&request("huiyuan_id"))
-		response.Write("<script language='javascript'>alert('ĞŞ¸Ä³É¹¦!');location.href='al_read2.aspx';</script>")
+		response.Write("<script language='javascript'>alert('ä¿®æ”¹æˆåŠŸ!');location.href='al_read2.aspx';</script>")
 		response.End()
 	end if
 	
@@ -31,7 +31,7 @@ set rs=server.CreateObject("adodb.recordset")
 
 rs.Open SQL,conn,1,1
 if rs.RecordCount=0 then
-  Response.Write "·Ç·¨²Ù×÷!"
+  Response.Write "éæ³•æ“ä½œ!"
   Response.End 
 end if
 
@@ -43,16 +43,13 @@ end if
 
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title">
   <tr>
-    <td height="80" colspan="2">ĞŞ¸Ä×ÊÁÏ</td>
-  </tr>
-  <tr>
     <td width="2%" align="center" bgcolor="EEEEEE"><img src="../images/3.jpg" width="13" height="10" /></td>
-    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">Ê×Ò³ &gt; »áÔ±ÁĞ±í &gt; ĞŞ¸Ä×ÊÁÏ</td>
+    <td width="98%" height="40" bgcolor="EEEEEE" class="titlea">é¦–é¡µ &gt; ä¼šå‘˜åˆ—è¡¨ &gt; ä¿®æ”¹èµ„æ–™</td>
   </tr>
 </table>
 <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="FFB849">
   <tr class="biao">
-    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />ĞŞ¸Ä×ÊÁÏ</td>
+    <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />ä¿®æ”¹èµ„æ–™</td>
   </tr>
   <tr>
     <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
@@ -61,34 +58,33 @@ end if
 		<tr>
 		  <td align="center"><table width="100%" border="0" cellpadding="0" cellspacing="0">
             <tr>
-              <td width="586" height="40" align="right" class="content">ÊÖ»úºÅÂë£º</td>
+              <td width="486" height="40" align="right" class="content">æ‰‹æœºå·ç ï¼š</td>
               <td width="584" height="40" align="left" class="content" style="padding-left:5px;"><input name="tel" type="text" id="tel" value="<%=rs("tel")%>" />
                 <input name="id" type="hidden" id="id" value="<%=request("huiyuan_id")%>" /></td>
               </tr>
             <tr>
-              <td height="40" align="right" class="content">ĞÔ±ğ£º</td>
+              <td height="40" align="right" class="content">æ€§åˆ«ï¼š</td>
               <td height="40" align="left" class="content" style="padding-left:5px;">
 			  
 			 
                 <label>
                 <input type="radio" name="sex" value="1"  <%if rs("sex")=1 then%> checked="checked"<%end if%> />
                 </label>
-                ÄĞ±¦±¦
+                ç”·å®å®
                   <label>
                   <input type="radio" name="sex" value="2"<%if rs("sex")=2 then%> checked="checked"<%end if%>  />
                   </label>
-                  Å®±¦±¦
+                  å¥³å®å®
                  </td>
             </tr>
 
           </table>
 		    <br />
-		   
 		      <label>
-		        <input name="Submit" type="submit" id="Submit" value="ĞŞ¸Ä" />
+		        <input name="Submit" type="submit" id="Submit" value="ä¿®æ”¹" />
 	          </label>
 	       <label>&nbsp;
-		    <input type="button" name="Submit" value="·µ»ØÉÏÒ»²ã" onclick="javascript:location.href='al_read2.aspx';" /> </label></td>
+		    <input type="button" name="Submit" value="è¿”å›ä¸Šä¸€å±‚" onclick="javascript:location.href='al_read2.aspx';" /> </label></td>
 		</tr>
 		<tr>
 		  <td align="center">&nbsp;</td>

@@ -89,12 +89,12 @@ end if
       <td height="40" style="padding-left:10px;"><img src="../images/4.jpg" width="18" height="15" />用户列表</td>
     </tr>
     <tr>
-      <td align="center" bgcolor="#FFFFFF" style="padding-top:10px; padding-bottom:10px;">
+      <td align="center" bgcolor="#FFFFFF" style="padding-bottom:10px;">
         
         <table width="99%" border="0" cellpadding="0" cellspacing="0">
           <tr>
             <td>
-              <table width="100%" height="60" border="0" align="left" cellspacing="0" class="content">
+              <table width="100%" height="40" border="0" align="left" cellspacing="0" class="content">
 
                 <tr valign="top">
                   <td height="30" align="left" valign="middle">
@@ -122,19 +122,6 @@ end if
 					</form>					</td>
                   <td align="left" valign="middle"><input name="Submit22" type="submit" id="Submit2" value="导出列表" onClick="javascript:location.href='al_read2_out.aspx?type=<%=request("type")%>&search=<%=request("search")%>&select=<%=request("select")%>&select1=<%=request("select1")%>&shijian1=<%=session("date1")%>&shijian2=<%=session("date2")%>'" /></td>
                 </tr>
-				                <tr valign="top">
-                  <td height="30" align="left" valign="middle">
-                    <form id="form3" name="form3" method="post" action="">
-                      
-                      激活码查询:  <input name="jihuoma" type="text" id="jihuoma" />
-
-                      <span style="margin:0px;">
-                      <input name="Submit23" type="submit" id="Submit22" value="查询" />
-                      </span>
-                    </form>
-                    </td>
-                  <td align="left" valign="middle">&nbsp;</td>
-                </tr>
               </table>
             </td>
           </tr>
@@ -161,7 +148,7 @@ end if
             <%else%>
             <a href="dj.aspx?flag=1&amp;id=<%=rs("id")%>"><font color="#FF0000">失效</font></a>
           <%end if%></td>
-          <td height="30" align="center" class="content"><a href="?action=del&amp;huiyuan_id=<%=rs("id")%>">删除</a>&nbsp;<a href="al_info.aspx?huiyuan_id=<%=rs("id")%>">修改</a>&nbsp;<a href="jihuoma.aspx?huiyuan_id=<%=rs("id")%>">查看激活码</a></td>
+          <td height="30" align="center" class="content"><a href="?action=del&amp;huiyuan_id=<%=rs("id")%>" onClick="javascript:if(!confirm('\n特别提示!删除后将无法进行恢复。'))  return  false; ">删除</a>&nbsp;<a href="al_info.aspx?huiyuan_id=<%=rs("id")%>">修改</a>&nbsp;<a href="jihuoma.aspx?huiyuan_id=<%=rs("id")%>">查看激活码</a></td>
         </tr>
           <%
 			  i=i+1
